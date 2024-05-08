@@ -30,10 +30,13 @@ port(
     clk : in std_logic;
     rst : in std_logic;
     start : in std_logic;
-    pixel_x : in std_logic_vector(SIZE-1 downto 0);
-    pixel_y : in std_logic_vector(SIZE-1 downto 0);
+    pixel_x_i : in std_logic_vector(SIZE_PIXEL-1 downto 0);
+    pixel_y_i : in std_logic_vector(SIZE_PIXEL-1 downto 0);
     c_real : in std_logic_vector(SIZE-1 downto 0);
     c_imaginary : in std_logic_vector(SIZE-1 downto 0);
+    
+    pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
+    pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
     ready : out std_logic;
     finished : out std_logic;
     iterations : out std_logic_vector(SIZE-1 downto 0)
@@ -46,6 +49,7 @@ architecture pipeline of mandelbrot_calculator is
     -- Components
     component mandelbrot_inter is
         generic ( 
+            SIZE_PIXEL : integer := 12;
             COMMA : integer := 12; -- nombre de bits après la virgule
             SIZE : integer := 16);
         port(
@@ -98,8 +102,8 @@ begin
     z_reel_s(0)     <= (others => '0');
     z_imag_s(0)     <= (others => '0');
     num_inter_s(0)  <= (others => '0');
-    pixel_x_s(0)    <= pixel_x;
-    pixel_y_s(0)    <= pixel_y;
+    pixel_x_s(0)    <= pixel_x_i;
+    pixel_y_s(0)    <= pixel_y_i;
     end_s(0)        <= '0';
     data_ok_s(0)    <= start;
 
@@ -109,7 +113,8 @@ begin
     pipeline_generator : for i in 0 to MAX_ITER - 1 generate
         mandelbrot_stage : mandelbrot_inter
         generic map(
-            comma       => comma,
+            SIZE_PIXEL => SIZE_PIXEL,
+            COMMA       => COMMA,
             SIZE        => SIZE
         )
         port map(
@@ -140,7 +145,7 @@ begin
     ready <= '1'; -- always ready because we have a pipeline
     finished <= end_s(MAX_ITER);
     iterations <= num_inter_s(MAX_ITER);
-    z_imaginary <= z_imag_s(MAX_ITER);
-    z_real <= z_reel_s(MAX_ITER);
+    pixel_x_o <= pixel_x_s(MAX_ITER);
+    pixel_y_o <= pixel_y_s(MAX_ITER);
     
 end pipeline;

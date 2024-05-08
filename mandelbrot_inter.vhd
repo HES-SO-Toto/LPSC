@@ -41,8 +41,8 @@ port(
     num_inter_i : in std_logic_vector(SIZE-1 downto 0);
     end_o : out std_logic;
     data_ok_o : out std_logic;
-    pixel_x_o : in std_logic_vector(SIZE_PIXEL-1 downto 0);
-    pixel_y_o : in std_logic_vector(SIZE_PIXEL-1 downto 0);
+    pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
+    pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
     c_reel_o : out std_logic_vector(SIZE-1 downto 0);
     c_imag_o : out std_logic_vector(SIZE-1 downto 0);
     z_reel_o : out std_logic_vector(SIZE-1 downto 0);
