@@ -19,11 +19,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.lpsc_pkg.all;
 
 entity mandelbrot_calculator is
 generic ( 
-    SIZE_PIXEL : integer := 12;
+    SIZE_PIXEL : integer := 10;
     COMMA : integer := 12; -- nombre de bits après la virgule
     MAX_ITER : integer := 100;
     SIZE : integer := 16);
@@ -63,8 +62,8 @@ architecture pipeline of mandelbrot_calculator is
             num_inter_i : in std_logic_vector(SIZE-1 downto 0);
             end_o : out std_logic;
             data_ok_o : out std_logic;
-            pixel_x_o : in std_logic_vector(SIZE_PIXEL-1 downto 0);
-            pixel_y_o : in std_logic_vector(SIZE_PIXEL-1 downto 0);
+            pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
+            pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
             c_reel_o : out std_logic_vector(SIZE-1 downto 0);
             c_imag_o : out std_logic_vector(SIZE-1 downto 0);
             z_reel_o : out std_logic_vector(SIZE-1 downto 0);
@@ -75,12 +74,15 @@ architecture pipeline of mandelbrot_calculator is
     -- Types (Nomenclature : name of the type + _t)
     -- exemple : type state_t is (idle, start, stop);
     type pipeline_t is array(0 to MAX_ITER) of std_logic_vector(SIZE-1 downto 0);
+    type pipeline_pixel_t is array(0 to MAX_ITER) of std_logic_vector(SIZE_PIXEL-1 downto 0);
     type pipeline_bool_t is array(0 to MAX_ITER) of std_logic;
     
     -- Signals (Nomenclature : name of the signal + _s)
     -- exemple : signal a : signed(N_bit-1 downto 0);
     signal end_s : std_logic_vector(MAX_ITER downto 0);
     signal data_ok_s : std_logic_vector(MAX_ITER downto 0);
+    signal pixel_x_s : pipeline_pixel_t;
+    signal pixel_y_s : pipeline_pixel_t;
     signal c_reel_s : pipeline_t;
     signal c_imag_s : pipeline_t;
     signal z_reel_s : pipeline_t;
@@ -96,6 +98,8 @@ begin
     z_reel_s(0)     <= (others => '0');
     z_imag_s(0)     <= (others => '0');
     num_inter_s(0)  <= (others => '0');
+    pixel_x_s(0)    <= pixel_x;
+    pixel_y_s(0)    <= pixel_y;
     end_s(0)        <= '0';
     data_ok_s(0)    <= start;
 
@@ -113,6 +117,8 @@ begin
             rst_i           => rst,
             end_i           => end_s(i),
             data_ok_i       => data_ok_s(i),
+            pixel_x_i       => pixel_x_s(i),
+            pixel_y_i       => pixel_y_s(i),
             c_reel_i        => c_reel_s(i),
             c_imag_i        => c_imag_s(i),
             z_reel_i        => z_reel_s(i),
@@ -122,6 +128,8 @@ begin
             c_imag_o        => c_imag_s(i+1),
             z_reel_o        => z_reel_s(i+1),
             z_imag_o        => z_imag_s(i+1),
+            pixel_x_o       => pixel_x_s(i+1),
+            pixel_y_o       => pixel_y_s(i+1),
             num_inter_o     => num_inter_s(i+1),
             end_o           => end_s(i+1),
             data_ok_o       => data_ok_s(i+1)
