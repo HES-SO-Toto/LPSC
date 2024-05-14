@@ -23,8 +23,8 @@ use ieee.numeric_std.all;
 entity mandelbrot_inter is
 generic ( 
     SIZE_PIXEL : integer := 12;
-    COMMA : integer := 1; -- nombre de bits après la virgule
-    SIZE : integer := 4;
+    COMMA : integer := 14; -- nombre de bits après la virgule
+    SIZE : integer := 18;
     N_ITER : integer := 9
     );
 port(
@@ -79,6 +79,13 @@ architecture behave of mandelbrot_inter is
 
     -- exemple : signal a : signed(N_bit-1 downto 0);
     -- Procedures (Nomenclature : name of the procedure + _p)
+    
+    -- Attribute :
+    attribute USE_DSP : STRING ;
+    attribute USE_DSP of power_z_reel_s : signal is "YES";
+    attribute USE_DSP of power_z_im_s : signal is "YES";
+    attribute USE_DSP of mult_z_reel_image_s : signal is "YES";
+    attribute USE_DSP of power_z_real_minus_imag_s : signal is "YES";
 
 begin
     -- Description of the behavior of the entity
@@ -99,7 +106,7 @@ begin
             pixel_y_o           <= (others => '0');
             data_ok_o           <= '0';
         elsif rising_edge(clk_i) then
-            end_o               <= diverge_s;
+            end_o               <= end_fut_s;
             z_reel_o            <= std_logic_vector(z_real_fut_s);
             z_imag_o            <= std_logic_vector(z_imag_fut_s);
             c_reel_o            <= c_reel_i;
@@ -122,9 +129,9 @@ begin
     diverge_s <= '1' when euclidean_distance_s >= FOUR else '0';
     end_s <= '1' when (unsigned(num_inter_i) + 1) >= N_ITER else '0';
     -- Next state
-    z_real_fut_s <= signed(z_reel_i) when diverge_s='1' else power_z_real_minus_imag_s(HIGH_IDX downto LAST_INDEX) + signed(c_reel_i);
-    z_imag_fut_s <= signed(z_imag_i) when diverge_s='1' else shift_left(mult_z_reel_image_s,1)(HIGH_IDX downto LAST_INDEX) + signed(c_imag_i);
-    num_inter_fut_s <= unsigned(num_inter_i) + 1 when diverge_s='0' else unsigned(num_inter_i);
+    z_real_fut_s <= power_z_real_minus_imag_s(HIGH_IDX downto LAST_INDEX) + signed(c_reel_i);
+    z_imag_fut_s <= shift_left(mult_z_reel_image_s,1)(HIGH_IDX downto LAST_INDEX) + signed(c_imag_i);
+    num_inter_fut_s <= unsigned(num_inter_i) + 1 when end_fut_s='0' else unsigned(num_inter_i);
 
     -- Divergence
     end_fut_s <= '1' when (diverge_s = '1') or (end_s ='1') or (end_i = '1')else '0';

@@ -24,8 +24,8 @@ entity mandelbrot_calculator is
 generic ( 
     SIZE_PIXEL : integer := 10;
     COMMA : integer := 12; -- nombre de bits après la virgule
-    MAX_ITER : integer := 100;
-    SIZE : integer := 16);
+    MAX_ITER : integer := 3;
+    SIZE : integer := 21);
 port(
     clk : in std_logic;
     rst : in std_logic;
@@ -50,8 +50,8 @@ architecture pipeline of mandelbrot_calculator is
     component mandelbrot_inter is
         generic ( 
             SIZE_PIXEL : integer := 12;
-            COMMA : integer := 12; -- nombre de bits après la virgule
-            SIZE : integer := 16);
+            COMMA : integer := 6; -- nombre de bits après la virgule
+            SIZE : integer := 8);
         port(
             clk_i : in std_logic;
             rst_i : in std_logic;
