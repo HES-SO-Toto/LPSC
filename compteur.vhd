@@ -28,7 +28,7 @@ entity counter is
     port(
         clock_i : in std_logic;
         incr_i : in std_logic;
-        reset_i : in std_logic;
+        nreset_i : in std_logic;
         count_o : out std_logic_vector(Nbit-1 downto 0);
         ovf_o : out std_logic
     );
@@ -43,6 +43,8 @@ architecture behave of counter is
     -- Signals (Nomenclature : name of the signal + _s)
     -- exemple : signal a : signed(N_bit-1 downto 0);
     signal count_pres_s, count_fut_s: std_logic_vector(Nbit-1 downto 0);
+    signal incr_old_s : std_logic;
+    signal rising_edge_det_s : std_logic;
     signal ovf_s : std_logic;
 
     -- Procedures (Nomenclature : name of the procedure + _p)
@@ -50,15 +52,18 @@ architecture behave of counter is
 begin
     -- Declarations
     -- Process
-    count_fut_s <= std_logic_vector(unsigned(count_pres_s)+1) when incr_i = '1' and ovf_s = '0' else
-                   (others => '0') when incr_i = '1' and ovf_s = '1' else
+    rising_edge_det_s <= '1' when incr_old_s = '0' and incr_i = '1' else '0';
+    count_fut_s <= std_logic_vector(unsigned(count_pres_s)+1) when rising_edge_det_s = '1' and ovf_s = '0' else
+                   (others => '0') when rising_edge_det_s = '1' and ovf_s = '1' else
                    count_pres_s;
     
-    process(clock_i,reset_i)
+    
+    process(clock_i,nreset_i)
     begin
-        if reset_i='1' then
+        if nreset_i='0' then
             count_pres_s <= (others => '0');
         elsif rising_edge(clock_i) then
+            incr_old_s <= incr_i;
             count_pres_s <= count_fut_s;
         end if; 
     end process;
