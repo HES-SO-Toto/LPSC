@@ -36,7 +36,8 @@ entity top is
         start_i : in std_logic;
         real_00_i : in std_logic_vector(DATASIZE-1 downto 0);
         imag_00_i : in std_logic_vector(DATASIZE-1 downto 0);
-        step_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+        step_x_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+        step_y_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
         pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
         pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);
         interations_o : out std_logic_vector(SIZE_ITER-1 downto 0);
@@ -77,7 +78,8 @@ architecture behave of top is
         port(
             real_00_i : in std_logic_vector(DATASIZE-1 downto 0); -- real. pos 0,0
             imag_00_i : in std_logic_vector(DATASIZE-1 downto 0); -- imag. pos 0,0
-            step_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+            step_x_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+            step_y_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
 
             next_i : in std_logic; -- next pixel
             clk_i : in std_logic; -- clock
@@ -173,7 +175,8 @@ begin
         port map (
             real_00_i => real_00_i, -- real. pos 0,0
             imag_00_i => imag_00_i, -- imag. pos 0,0
-            step_i => step_i,  -- size step
+            step_x_i => step_x_i,  -- size step
+            step_y_i => step_y_i,  -- size step
 
             next_i => incr_s, -- next pixel 
             clk_i => clk_i, -- clock

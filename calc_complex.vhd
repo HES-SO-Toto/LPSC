@@ -30,7 +30,8 @@ entity calc_complex is
     port(
         real_00_i : in std_logic_vector(DATASIZE-1 downto 0); -- real. pos 0,0
         imag_00_i : in std_logic_vector(DATASIZE-1 downto 0); -- imag. pos 0,0
-        step_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+        step_x_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
+        step_y_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
 
         next_i : in std_logic; -- next pixel
         clk_i : in std_logic; -- clock
@@ -128,8 +129,8 @@ begin
         count_o => cnt_y_s,
         ovf_o => ovf_counter_y_s
     );
-    calc_z_real_s <= std_logic_vector(unsigned(real_00_i) + (unsigned(step_i) * unsigned(cnt_x_s)));
-    calc_z_imag_s <= std_logic_vector(unsigned(imag_00_i) - (unsigned(step_i) * unsigned(cnt_y_s)));
+    calc_z_real_s <= std_logic_vector(unsigned(real_00_i) + (unsigned(step_x_i) * unsigned(cnt_x_s)));
+    calc_z_imag_s <= std_logic_vector(unsigned(imag_00_i) - (unsigned(step_y_i) * unsigned(cnt_y_s)));
     -- sorties
     z_real_fut_s <= calc_z_real_s(DATASIZE-1 downto 0);
     z_imag_fut_s <= calc_z_imag_s(DATASIZE-1 downto 0);
