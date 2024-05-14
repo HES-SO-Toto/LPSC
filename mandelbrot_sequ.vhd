@@ -23,18 +23,19 @@ use ieee.numeric_std.all;
 entity mandelbrot_seq is
 generic ( 
     SIZE_PIXEL : integer := 12;
-    COMMA : integer := 14; -- nombre de bits après la virgule
+    COMMA : integer := 14;
     SIZE : integer := 18;
-    N_ITER : integer := 100
+    N_ITER : integer := 100;
+    SIZE_ITER : integer := 7
     );
 port(
     clk_i : in std_logic;
-    rst_i : in std_logic;
+    nreset_i : in std_logic;
     data_ok_i : in std_logic;
     c_reel_i : in std_logic_vector(SIZE-1 downto 0);
     c_imag_i : in std_logic_vector(SIZE-1 downto 0);
     end_o : out std_logic;
-    num_inter_o : out std_logic_vector(SIZE-1 downto 0)
+    num_inter_o : out std_logic_vector(SIZE_ITER-1 downto 0)
 );
 end mandelbrot_seq;
 
@@ -42,7 +43,7 @@ architecture behave of mandelbrot_seq is
     -- Déclaration of the signals,components,types and procedures
     constant LAST_INDEX   : integer := COMMA; -- index of the last bit
     constant HIGH_IDX  : integer := LAST_INDEX+SIZE-1;
-    constant FOUR : signed((2*SIZE-1) downto 0) := (2*COMMA+3 => '1', others => '0');
+    constant FOUR : signed((2*SIZE)-1 downto 0) := ((COMMA*2)+2 => '1', others => '0');
     -- Components (Nomenclature : name of the component + _c)
     -- Components
     -- Types (Nomenclature : name of the type + _t)
@@ -50,6 +51,10 @@ architecture behave of mandelbrot_seq is
     -- exemple : type state_t is (idle, start, stop);
     signal state_fut_s,state_pres_s :state_t;
     -- Signals (Nomenclature : name of the signal + _s)
+    signal diverge_s : std_logic;
+    signal end_s : std_logic;
+    signal end_fut_s : std_logic;
+    signal end_pres_s : std_logic;
 
     signal power_z_reel_s : signed(2*SIZE-1 downto 0);
     signal power_z_im_s : signed(2*SIZE-1 downto 0);
@@ -60,8 +65,9 @@ architecture behave of mandelbrot_seq is
     signal z_imag_fut_s : signed(SIZE-1 downto 0);
     signal z_reel_pres_s : signed(SIZE-1 downto 0);
     signal z_imag_pres_s : signed(SIZE-1 downto 0);
-    signal n_iter_fut_s : unsigned(SIZE-1 downto 0);
-    signal n_iter_pres_s : unsigned(SIZE-1 downto 0);
+    signal num_inter_fut_s : unsigned(SIZE-1 downto 0);
+    signal n_iter_fut_s : unsigned(SIZE_ITER-1 downto 0);
+    signal n_iter_pres_s : unsigned(SIZE_ITER-1 downto 0);
     
 
     signal euclidean_distance_s : signed(2*SIZE-1 downto 0);
@@ -105,7 +111,7 @@ begin
                     state_fut_s<= CALCULING;
                 end if ;
             when CALCULING =>
-                end_v := '1' when (n_iter_pres_s + 1 >= N_ITER) or (euclidean_distance_s >= FOUR) else '0'; 
+                end_v := '1' when (n_iter_pres_s + 1 >= N_ITER) or (euclidean_distance_s > FOUR) else '0'; 
                 z_reel_fut_s <= power_z_real_minus_imag_s(HIGH_IDX downto LAST_INDEX) + signed(c_reel_i);
                 z_imag_fut_s <= shift_left(mult_z_reel_image_s,1)(HIGH_IDX downto LAST_INDEX) + signed(c_imag_i);
                 n_iter_fut_s <= n_iter_pres_s + 1;
@@ -121,9 +127,9 @@ begin
         end case;
 
     end process;
-    process(clk_i, rst_i)
+    process(clk_i, nreset_i)
     begin
-        if rst_i = '0' then
+        if nreset_i = '0' then
             z_reel_pres_s       <= (others => '0');
             z_imag_pres_s       <= (others => '0');
             n_iter_pres_s       <= (others => '0');
@@ -138,10 +144,10 @@ begin
     -- Components instantiation 
 
     -- Arithmetic operations
-    power_z_im_s <= (signed(z_imag_pres_s) * signed(z_imag_pres_s));
-    power_z_reel_s <= (signed(z_reel_pres_s) * signed(z_reel_pres_s));
-    mult_z_reel_image_s <= (signed(z_reel_pres_s)*signed(z_imag_pres_s));
-    power_z_real_minus_imag_s <= (power_z_reel_s - power_z_im_s);
+    power_z_im_s <= z_imag_pres_s * z_imag_pres_s;
+    power_z_reel_s <= z_reel_pres_s * z_reel_pres_s;
+    mult_z_reel_image_s <= z_reel_pres_s*z_imag_pres_s;
+    power_z_real_minus_imag_s <= power_z_reel_s - power_z_im_s;
     -- Euclidean distance
     euclidean_distance_s <= power_z_reel_s + power_z_im_s;
 

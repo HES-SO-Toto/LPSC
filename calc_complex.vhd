@@ -19,13 +19,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.lpsc_pkg.all;
 
 entity calc_complex is
     generic (
-        N_bit : integer := DATASIZE;
-        X : integer := SCREEN_X_SIZE;
-        Y : integer := SCREEN_Y_SIZE
+        DATASIZE : integer := 18;
+        SIZE_PIXEL : integer := 10;
+        X : integer := 720;
+        Y : integer := 720
     );
     port(
         real_00_i : in std_logic_vector(DATASIZE-1 downto 0); -- real. pos 0,0
@@ -34,15 +34,13 @@ entity calc_complex is
 
         next_i : in std_logic; -- next pixel
         clk_i : in std_logic; -- clock
-        rst_i : in std_logic; -- reset
+        nreset_i : in std_logic; -- reset
 
-        pixel_x_o : out std_logic_vector(DATASIZE-1 downto 0);-- x position out
-        pixel_y_o : out std_logic_vector(DATASIZE-1 downto 0); -- y position out
+        pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);-- x position out
+        pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0); -- y position out
 
         real_n_o : out std_logic_vector(DATASIZE-1 downto 0); -- real out
-        imag_n_o : out std_logic_vector(DATASIZE-1 downto 0); -- imag out
-
-        valid_o : out std_logic -- valid out
+        imag_n_o : out std_logic_vector(DATASIZE-1 downto 0) -- imag out
     );
 end entity calc_complex;
 
@@ -53,34 +51,34 @@ architecture behave of calc_complex is
     -- Components
     component counter
         generic (
-            Nmax : integer := 720;
-            Nbit : integer := 10
+            Nmax : integer := X;
+            Nbit : integer := SIZE_PIXEL
             );
         port (
             clock_i : in std_logic;
             incr_i : in std_logic;
-            reset_i : in std_logic;
-            count_o : out std_logic_vector(DATASIZE-1 downto 0);
+            nreset_i : in std_logic;
+            count_o : out std_logic_vector(Nbit-1 downto 0);
             ovf_o : out std_logic
         );
     end component;
     -- Types (Nomenclature : name of the type + _t)
     -- exemple : type state_t is (idle, start, stop);
     -- Signals (Nomenclature : name of the signal + _s)
-    signal cnt_x_reg_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal cnt_y_reg_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal cnt_x_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal cnt_y_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal cnt_x_fut_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal cnt_y_fut_s : std_logic_vector(DATASIZE-1 downto 0);
+    signal cnt_x_reg_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_y_reg_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_x_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_y_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_x_fut_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_y_fut_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
     signal real_reg_s : std_logic_vector(DATASIZE-1 downto 0);
     signal imag_reg_s : std_logic_vector(DATASIZE-1 downto 0);
     signal z_real_fut_s : std_logic_vector(DATASIZE-1 downto 0);
     signal z_imag_fut_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal calc_z_real_s : std_logic_vector(2*DATASIZE-1 downto 0);
-    signal calc_z_imag_s : std_logic_vector(2*DATASIZE-1 downto 0);
+    signal calc_z_real_s : std_logic_vector(SIZE_PIXEL+DATASIZE-1 downto 0);
+    signal calc_z_imag_s : std_logic_vector(SIZE_PIXEL+DATASIZE-1 downto 0);
     signal ovf_counter_x_s,ovf_counter_y_s : std_logic;
-    signal valid_s : std_logic;
+    signal incr_s : std_logic;
     -- exemple : signal a : signed(N_bit-1 downto 0);
     -- Procedures (Nomenclature : name of the procedure + _p)
 
@@ -90,49 +88,48 @@ begin
     -- Declarations
 
     -- Process
-    process(clk_i,rst_i)
+    process(clk_i,nreset_i)
     begin
-        if rst_i = '1' then
+        if nreset_i = '0' then
             cnt_x_reg_s <= (others => '0');
             cnt_y_reg_s <= (others => '0');
             real_reg_s <= (others => '0');
             imag_reg_s <= (others => '0');
-            valid_s <= '0';
         elsif rising_edge(clk_i) then
             cnt_x_reg_s <= cnt_x_fut_s;
             cnt_y_reg_s <= cnt_y_fut_s;
             real_reg_s <= z_real_fut_s;
             imag_reg_s <= z_imag_fut_s;
-            valid_s <= next_i;
+            incr_s <= next_i;
         end if;
     end process;
     -- Components instantiation 
     counter_x_c : counter
     generic map (
-        Nmax => SCREEN_X_SIZE,
-        Nbit => DATASIZE
+        Nmax => X,
+        Nbit => SIZE_PIXEL
     )
     port map (
         clock_i => clk_i,
-        incr_i  => next_i,
-        reset_i  => rst_i,
+        incr_i  => incr_s,
+        nreset_i  => nreset_i,
         count_o => cnt_x_s,
         ovf_o => ovf_counter_x_s
     );
     counter_y_c : counter
     generic map (
-        Nmax => SCREEN_Y_SIZE,
-        Nbit => DATASIZE
+        Nmax => Y,
+        Nbit => SIZE_PIXEL
     )
     port map (
         clock_i => clk_i,
         incr_i  => ovf_counter_x_s,
-        reset_i  => rst_i,
+        nreset_i  => nreset_i,
         count_o => cnt_y_s,
         ovf_o => ovf_counter_y_s
     );
     calc_z_real_s <= std_logic_vector(unsigned(real_00_i) + (unsigned(step_i) * unsigned(cnt_x_s)));
-    calc_z_imag_s <= std_logic_vector(unsigned(imag_00_i) + (unsigned(step_i) * unsigned(cnt_y_s)));
+    calc_z_imag_s <= std_logic_vector(unsigned(imag_00_i) - (unsigned(step_i) * unsigned(cnt_y_s)));
     -- sorties
     z_real_fut_s <= calc_z_real_s(DATASIZE-1 downto 0);
     z_imag_fut_s <= calc_z_imag_s(DATASIZE-1 downto 0);
@@ -143,5 +140,5 @@ begin
     pixel_y_o <= cnt_y_reg_s;
     real_n_o <= real_reg_s;
     imag_n_o <= imag_reg_s;
-    valid_o <= valid_s;
+    
 end behave;
