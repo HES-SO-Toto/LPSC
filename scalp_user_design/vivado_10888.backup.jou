@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May 10 00:14:46 2024
+# Process ID: 10888
+# Current directory: E:/scalp_revc_windows/scalp_user_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21052 E:\scalp_revc_windows\scalp_user_design\scalp_user_design.xpr
+# Log file: E:/scalp_revc_windows/scalp_user_design/vivado.log
+# Journal file: E:/scalp_revc_windows/scalp_user_design\vivado.jou
+# Running On: DESKTOP-BKSE7R5, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/scalp_revc_windows/scalp_user_design/scalp_user_design.xpr

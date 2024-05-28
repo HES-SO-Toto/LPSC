@@ -1,0 +1,1274 @@
+
+*** Running vivado
+    with args -log scalp_user_design.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source scalp_user_design.tcl
+
+
+Commande ECHO d‚sactiv‚e.
+Commande ECHO d‚sactiv‚e.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source scalp_user_design.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 453.742 ; gain = 186.414
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/scalp_revc_windows'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 510.531 ; gain = 52.840
+Command: read_checkpoint -auto_incremental -incremental E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/utils_1/imports/synth_1/scalp_user_design.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/utils_1/imports/synth_1/scalp_user_design.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top scalp_user_design -part xc7z015clg485-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7196
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1377.676 ; gain = 441.828
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-9696] invalid to access 'ramfile' from inside pure function 'initramfromfile'. [E:/mandelbrot/LPSC/Bram.vhd:52]
+WARNING: [Synth 8-9222] cannot call impure function 'initramfromfile' from within pure function 'init_from_file_or_zeroes' [E:/mandelbrot/LPSC/Bram.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'scalp_user_design' [E:/mandelbrot/files/scalp_user_design.vhd:311]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_wrapper' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:101]
+	Parameter C_AXI4_ARADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_AXI4_RDATA_SIZE bound to: 32 - type: integer 
+	Parameter C_AXI4_RRESP_SIZE bound to: 2 - type: integer 
+	Parameter C_AXI4_AWADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_AXI4_WDATA_SIZE bound to: 32 - type: integer 
+	Parameter C_AXI4_WSTRB_SIZE bound to: 4 - type: integer 
+	Parameter C_AXI4_BRESP_SIZE bound to: 2 - type: integer 
+	Parameter C_GPIO_SWITCHES_SIZE bound to: 2 - type: integer 
+	Parameter C_GPIO_JOYSTICK_SIZE bound to: 5 - type: integer 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: LVCMOS25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'IoExtIICSclxI' to cell 'IOBUF' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:120]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: LVCMOS25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'IoExtIICSdaxI' to cell 'IOBUF' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2347]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_joystick_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:6' bound to instance 'axi_gpio_joystick' of component 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3127]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_reset_btn_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:6' bound to instance 'axi_gpio_reset_btn' of component 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3151]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_switches_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:6' bound to instance 'axi_gpio_switches' of component 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3174]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_iic_ioext_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:6' bound to instance 'axi_iic_ioext' of component 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3198]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_intc_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:6' bound to instance 'axi_intc_0' of component 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3228]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_gnd_constant_0' declared at 'e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53' bound to instance 'gnd_constant' of component 'scalp_zynqps_gnd_constant_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3252]
+INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_gnd_constant_0' [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [e:/mandelbrot/scalp_zynqps/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [e:/mandelbrot/scalp_zynqps/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'scalp_zynqps_gnd_constant_0' (0#1) [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
+INFO: [Synth 8-3491] module 'scalp_zynqps_processing_system7_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3256]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:92]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:1218]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_FF8Z4U' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_FF8Z4U' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_931Y5A' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:159]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_931Y5A' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_75GW2M' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:260]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_75GW2M' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_455P5Q' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_455P5Q' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:361]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_TQZ7BY' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:462]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_TQZ7BY' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:462]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_YFU1B2' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:563]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_YFU1B2' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:563]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_J98Y8U' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:664]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_J98Y8U' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:664]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_BVJLL9' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:788]
+INFO: [Synth 8-3491] module 'scalp_zynqps_auto_pc_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:971]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_BVJLL9' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:788]
+INFO: [Synth 8-3491] module 'scalp_zynqps_xbar_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2105]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:1218]
+INFO: [Synth 8-3491] module 'scalp_zynqps_rst_ps7_0_125M_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_125M' of component 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3517]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:6' bound to instance 'scalp_axi_link_cplx_num_regs' of component 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3530]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_firmwareid_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:6' bound to instance 'scalp_axi_link_firmwareid' of component 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3571]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'scalp_zynqps_sys_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:6' bound to instance 'sys_clock' of component 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3612]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'scalp_zynqps_system_ila_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3619]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0' declared at 'E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:15' bound to instance 'vga_hdmi_clk_rst_sys_0' of component 'vga_hdmi_clk_rst_system_inst_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3628]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:6' bound to instance 'rst_ps7_1_vga' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:6' bound to instance 'rst_ps7_2_hdmi' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:6' bound to instance 'vga_hdmi_clock' of component 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'vga_hdmi_clk_rst_system_inst_0' (0#1) [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_xlconcat_0_0' declared at 'e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'scalp_zynqps_xlconcat_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3640]
+INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_xlconcat_0_0' [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_5_xlconcat' [e:/mandelbrot/scalp_zynqps/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [e:/mandelbrot/scalp_zynqps/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'scalp_zynqps_xlconcat_0_0' (0#1) [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'scalp_zynqps' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2347]
+INFO: [Synth 8-256] done synthesizing module 'scalp_zynqps_wrapper' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'scalp_firmwareid' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd:61]
+	Parameter C_REGS_ADDR_SIZE bound to: 4096 - type: integer 
+	Parameter C_NB_REGS_IN bound to: 0 - type: integer 
+	Parameter C_NB_REGS_OUT bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'scalp_firmwareid' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'scalp_pwm' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_pwm.vhd:47]
+	Parameter C_PWM_SIZE bound to: 8 - type: integer 
+	Parameter C_CLK_CNT_LEN bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'scalp_pwm' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_pwm.vhd:47]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed1RxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:631]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:640]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed1GxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:674]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed2RxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:683]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed1BxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:717]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutBufLed2BxI' to cell 'OBUF' [E:/mandelbrot/files/scalp_user_design.vhd:726]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:743]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufSwitch0xI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:743]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:758]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:758]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:758]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:758]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'InBufJoystickIdxxI' to cell 'IBUF' [E:/mandelbrot/files/scalp_user_design.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'scalp_cplx_num_regs' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:61]
+	Parameter C_REGS_ADDR_SIZE bound to: 4096 - type: integer 
+	Parameter C_NB_REGS_IN bound to: 0 - type: integer 
+	Parameter C_NB_REGS_OUT bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'scalp_cplx_num_regs' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'scalp_hdmi' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:52]
+	Parameter C_VGA_CONFIG bound to: 192'b000000101101000000000010110100000000000001100100000000000110010000000000000101000000000000010100000000000001010000000000000010000000001110101100000000110000000000000000000000000000000000000000 
+INFO: [Synth 8-638] synthesizing module 'vga' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga.vhd:48]
+	Parameter C_VGA_CONFIG bound to: 192'b000000101101000000000010110100000000000001100100000000000110010000000000000101000000000000010100000000000001010000000000000010000000001110101100000000110000000000000000000000000000000000000000 
+INFO: [Synth 8-638] synthesizing module 'vga_stripes' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'vga_stripes' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'vga_controler' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_controler.vhd:47]
+	Parameter C_VGA_CONFIG bound to: 192'b000000101101000000000010110100000000000001100100000000000110010000000000000101000000000000010100000000000001010000000000000010000000001110101100000000110000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'vga_controler' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_controler.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'vga' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'vga_to_hdmi' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'tmds_encoder' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/tmds_encoder.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'tmds_encoder' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/tmds_encoder.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'tmds_encoder__parameterized0' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/tmds_encoder.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'tmds_encoder__parameterized0' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/tmds_encoder.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'serializer_10_to_1' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd:44]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'MasterOSERDESE2xI' to cell 'OSERDESE2' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd:60]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SlaveOSERDESE2xI' to cell 'OSERDESE2' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'serializer_10_to_1' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd:44]
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxCNxI' to cell 'OBUFDS' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:160]
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxCNxI' to cell 'OBUFDS' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:160]
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxCNxI' to cell 'OBUFDS' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:160]
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxC3xI' to cell 'OBUFDS' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'vga_to_hdmi' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'scalp_hdmi' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:52]
+INFO: [Synth 8-3491] module 'pll_mandel' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:6' bound to instance 'pll_mandel_inst' of component 'pll_mandel' [E:/mandelbrot/files/scalp_user_design.vhd:921]
+INFO: [Synth 8-638] synthesizing module 'pll_mandel' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:16]
+	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 720 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/LPSC/top.vhd:27' bound to instance 'mandelbrot_top_inst' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:932]
+INFO: [Synth 8-638] synthesizing module 'top' [E:/mandelbrot/LPSC/top.vhd:55]
+	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 720 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/mandelbrot/LPSC/top.vhd:148]
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter SIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'mandelbrot_seq' declared at 'E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:23' bound to instance 'mandelbrot_seq_inst' of component 'mandelbrot_seq' [E:/mandelbrot/LPSC/top.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'mandelbrot_seq' [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:42]
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter SIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'mandelbrot_seq' (0#1) [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:42]
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter X bound to: 720 - type: integer 
+	Parameter Y bound to: 720 - type: integer 
+INFO: [Synth 8-3491] module 'calc_complex' declared at 'E:/mandelbrot/LPSC/calc_complex.vhd:23' bound to instance 'calc_complex_c' of component 'calc_complex' [E:/mandelbrot/LPSC/top.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'calc_complex' [E:/mandelbrot/LPSC/calc_complex.vhd:48]
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter X bound to: 720 - type: integer 
+	Parameter Y bound to: 720 - type: integer 
+	Parameter Nmax bound to: 720 - type: integer 
+	Parameter Nbit bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/LPSC/compteur.vhd:23' bound to instance 'counter_x_c' of component 'counter' [E:/mandelbrot/LPSC/calc_complex.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'counter' [E:/mandelbrot/LPSC/compteur.vhd:37]
+	Parameter Nmax bound to: 720 - type: integer 
+	Parameter Nbit bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [E:/mandelbrot/LPSC/compteur.vhd:37]
+	Parameter Nmax bound to: 720 - type: integer 
+	Parameter Nbit bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/LPSC/compteur.vhd:23' bound to instance 'counter_y_c' of component 'counter' [E:/mandelbrot/LPSC/calc_complex.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'calc_complex' (0#1) [E:/mandelbrot/LPSC/calc_complex.vhd:48]
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter C_RAM_DEPTH bound to: 518400 - type: integer 
+INFO: [Synth 8-3491] module 'bram' declared at 'E:/mandelbrot/LPSC/Bram.vhd:17' bound to instance 'my_Bram_inst' of component 'Bram' [E:/mandelbrot/LPSC/top.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'bram' [E:/mandelbrot/LPSC/Bram.vhd:37]
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter C_RAM_DEPTH bound to: 518400 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'bram' (0#1) [E:/mandelbrot/LPSC/Bram.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [E:/mandelbrot/LPSC/top.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'scalp_user_design' (0#1) [E:/mandelbrot/files/scalp_user_design.vhd:311]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3640]
+WARNING: [Synth 8-3848] Net VgaPixCounterxDO[VidOnxS] in module/entity vga_stripes does not have driver. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd:39]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PSxB.ZynqxI'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:510]
+WARNING: [Synth 8-3848] Net Pll2V5GOExSO in module/entity scalp_user_design does not have driver. [E:/mandelbrot/files/scalp_user_design.vhd:88]
+WARNING: [Synth 8-3848] Net Pll2V5SyncxSO in module/entity scalp_user_design does not have driver. [E:/mandelbrot/files/scalp_user_design.vhd:90]
+WARNING: [Synth 8-7129] Port ena in module bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rstb in module bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[VgaResetxRNA] in module serializer_10_to_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxR] in module serializer_10_to_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxRNA] in module serializer_10_to_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[PllLockedxS] in module serializer_10_to_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port HdmixDIO[InxD][HpdxS] in module vga_to_hdmi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[HdmixC] in module vga_controler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[VgaResetxRNA] in module vga_controler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxR] in module vga_controler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ClocksxCI[HdmiResetxRNA] in module vga_controler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VgaPixCounterxDO[VidOnxS] in module vga_stripes is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[ResetxR][RstxRAN] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][3] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][2] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][1] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][0] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][2] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][1] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][0] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][3] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][2] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][1] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][0] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][2] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][1] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][0] in module scalp_cplx_num_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[ResetxR][RstxRAN] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][3] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][2] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][1] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARCachexD][0] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][2] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][1] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[RdxD][AddrxD][M2SxD][ARProtxD][0] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][3] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][2] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][1] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWCachexD][0] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][2] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][1] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AxiSlvxDIO[WrxD][AddrxD][M2SxD][AWProtxD][0] in module scalp_firmwareid is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1955.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_1_vga'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_1_vga'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_2_hdmi'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/rst_ps7_2_hdmi'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/processing_system7_0'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/processing_system7_0'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_scalp_axi_link_firmwareid_0/scalp_zynqps_scalp_axi_link_firmwareid_0/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/scalp_axi_link_firmwareid'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_scalp_axi_link_firmwareid_0/scalp_zynqps_scalp_axi_link_firmwareid_0/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/scalp_axi_link_firmwareid'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xbar_0/scalp_zynqps_xbar_0/scalp_zynqps_xbar_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xbar_0/scalp_zynqps_xbar_0/scalp_zynqps_xbar_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/ps7_0_axi_periph/xbar'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_auto_pc_0/scalp_zynqps_auto_pc_0/scalp_zynqps_auto_pc_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_auto_pc_0/scalp_zynqps_auto_pc_0/scalp_zynqps_auto_pc_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0/scalp_zynqps_axi_gpio_switches_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_intc_0'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0/scalp_zynqps_axi_intc_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_intc_0'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_reset_btn_0/scalp_zynqps_axi_gpio_reset_btn_0/scalp_zynqps_axi_gpio_reset_btn_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_reset_btn_0/scalp_zynqps_axi_gpio_reset_btn_0/scalp_zynqps_axi_gpio_reset_btn_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_system_ila_0_0/scalp_zynqps_system_ila_0_0/scalp_zynqps_system_ila_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/system_ila_0'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_system_ila_0_0/scalp_zynqps_system_ila_0_0/scalp_zynqps_system_ila_0_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/system_ila_0'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_scalp_axi_link_cplx_num_regs_0/scalp_zynqps_scalp_axi_link_cplx_num_regs_0/scalp_zynqps_scalp_axi_link_firmwareid_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/scalp_axi_link_cplx_num_regs'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_scalp_axi_link_cplx_num_regs_0/scalp_zynqps_scalp_axi_link_cplx_num_regs_0/scalp_zynqps_scalp_axi_link_firmwareid_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/scalp_axi_link_cplx_num_regs'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_rst_ps7_0_125M_0/scalp_zynqps_rst_ps7_0_125M_0/scalp_zynqps_rst_ps7_0_125M_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/rst_ps7_0_125M'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_rst_ps7_0_125M_0/scalp_zynqps_rst_ps7_0_125M_0/scalp_zynqps_rst_ps7_0_125M_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/rst_ps7_0_125M'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_iic_ioext_0/scalp_zynqps_axi_iic_ioext_0/scalp_zynqps_axi_iic_ioext_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_iic_ioext'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_iic_ioext_0/scalp_zynqps_axi_iic_ioext_0/scalp_zynqps_axi_iic_ioext_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_iic_ioext'
+Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick'
+Finished Parsing XDC File [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0/scalp_zynqps_axi_gpio_joystick_0_in_context.xdc] for cell 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick'
+Parsing XDC File [e:/mandelbrot/scalp_user_design/scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel/pll_mandel_in_context.xdc] for cell 'PLxB.ImGenxB.pll_mandel_inst'
+Finished Parsing XDC File [e:/mandelbrot/scalp_user_design/scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel/pll_mandel_in_context.xdc] for cell 'PLxB.ImGenxB.pll_mandel_inst'
+Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/debug.xdc]
+Finished Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/debug.xdc]
+Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/scalp_firmware.xdc]
+Finished Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/scalp_firmware.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/scalp_firmware.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/scalp_user_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/scalp_user_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[4]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:38]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[7]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:39]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[11]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[12]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:41]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[14]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:42]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[3]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:43]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[5]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[2]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[9]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[15]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[0]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[1]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:49]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[13]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:50]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[16]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:51]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[18]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[19]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[6]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[8]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[17]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addra[10]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[1]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[2]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:59]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[3]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[9]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[15]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[10]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:63]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[12]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[16]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:65]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[19]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:66]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[0]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:67]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[4]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:68]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[5]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:69]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[8]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:70]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[14]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:71]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[6]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:72]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[7]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:73]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[11]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[13]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[17]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/addrb[18]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:77]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/dina[0]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/dina[1]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/dina[2]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/dina[3]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/doutb[0]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/doutb[1]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:83]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/doutb[2]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:84]
+WARNING: [Vivado 12-507] No nets matched 'PLxB.ImGenxB.video_mem_inst/doutb[3]'. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:85]
+Finished Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/scalp_user_design_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/scalp_user_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/scalp_user_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1955.441 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Le chemin d'accŠs sp‚cifi‚ est introuvable.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1955.441 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRAddrxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRAddrxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRBankAddrxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRBankAddrxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRBankAddrxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRBankAddrxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRBankAddrxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRBankAddrxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRCasxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRCasxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRCkexSIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRCkexSIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRCsxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRCsxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRClkxCPIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRClkxCPIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRClkxCNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRClkxCNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDmxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDmxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDmxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDmxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDmxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDmxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDmxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDmxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDPIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDPIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDPIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDPIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDPIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDPIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDPIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDPIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDNIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDNIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDNIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDNIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDNIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDNIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqsxDNIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqsxDNIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[15]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[15]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[16]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[16]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[17]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[17]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[18]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[18]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[19]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[19]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[20]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[20]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[21]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[21]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[22]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[22]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[23]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[23]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[24]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[24]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[25]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[25]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[26]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[26]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[27]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[27]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[28]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[28]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[29]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[29]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[30]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[30]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[31]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[31]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDqxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDqxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRDRstxRNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRDRstxRNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for DDROdtxSIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDROdtxSIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRRasxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRRasxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRVrxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRVrxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRVrxSPIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRVrxSPIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for DDRWexSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDRWexSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[0]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[10]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[11]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[12]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[13]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[14]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[15]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[15]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[16]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[16]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[17]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[17]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[18]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[18]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[19]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[19]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[1]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[20]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[20]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[21]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[21]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[22]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[22]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[23]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[23]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[24]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[24]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[25]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[25]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[26]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[26]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[27]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[27]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[28]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[28]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[29]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[29]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[2]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[30]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[30]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[31]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[31]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[32]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[32]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[33]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[33]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[34]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[34]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[35]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[35]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[36]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[36]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[37]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[37]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[38]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[38]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[39]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[39]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[3]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[40]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[40]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[41]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[41]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[42]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[42]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[43]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[43]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[44]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[44]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[45]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[45]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[46]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[46]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[47]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[47]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[48]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[48]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[49]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[49]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[4]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[50]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[50]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[51]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[51]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[52]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[52]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[53]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[53]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[5]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[6]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[7]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[8]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property IO_BUFFER_TYPE = NONE for MIOxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for MIOxDIO[9]. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property IO_BUFFER_TYPE = NONE for PSClkxCIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PSClkxCIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property IO_BUFFER_TYPE = NONE for PSPorxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PSPorxSNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property IO_BUFFER_TYPE = NONE for PSSRstxRNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PSSRstxRNIO. (constraint file  e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /gnd_constant. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /scalp_axi_link_firmwareid. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /ps7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /axi_gpio_switches. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /axi_intc_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /axi_gpio_reset_btn. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /system_ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /scalp_axi_link_cplx_num_regs. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /rst_ps7_0_125M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /sys_clock. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /axi_iic_ioext. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /axi_gpio_joystick. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /vga_hdmi_clk_rst_sys_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /vga_hdmi_clk_rst_sys_0/vga_hdmi_clock. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /vga_hdmi_clk_rst_sys_0/rst_ps7_1_vga. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /vga_hdmi_clk_rst_sys_0/rst_ps7_2_hdmi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.pll_mandel_inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'AxiLitexB.WriteChanxB.WriteM2SRegPortxD_reg[WrAddrxD]' and it is trimmed from '32' to '12' bits. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd:264]
+INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' in module 'scalp_firmwareid'
+INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.WriteChanxB.WriteStatexD_reg' in module 'scalp_firmwareid'
+WARNING: [Synth 8-3936] Found unconnected internal register 'AxiLitexB.WriteChanxB.WriteM2SRegPortxD_reg[WrAddrxD]' and it is trimmed from '32' to '12' bits. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_cplx_num_regs.vhd:256]
+INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' in module 'scalp_cplx_num_regs'
+INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.WriteChanxB.WriteStatexD_reg' in module 'scalp_cplx_num_regs'
+INFO: [Synth 8-802] inferred FSM for state register 'state_pres_s_reg' in module 'mandelbrot_seq'
+INFO: [Synth 8-802] inferred FSM for state register 'state_pres_s_reg' in module 'top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+c_write_waiting_on_valid_addr_data |                              001 |                               00
+c_write_waiting_on_handshake |                              010 |                               01
+c_write_complete_transaction |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AxiLitexB.WriteChanxB.WriteStatexD_reg' using encoding 'one-hot' in module 'scalp_firmwareid'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+c_read_waiting_on_valid_addr |                              001 |                               00
+c_read_waiting_on_handshake |                              010 |                               01
+c_read_complete_transaction |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' using encoding 'one-hot' in module 'scalp_firmwareid'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+c_write_waiting_on_valid_addr_data |                              001 |                               00
+c_write_waiting_on_handshake |                              010 |                               01
+c_write_complete_transaction |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AxiLitexB.WriteChanxB.WriteStatexD_reg' using encoding 'one-hot' in module 'scalp_cplx_num_regs'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+c_read_waiting_on_valid_addr |                              001 |                               00
+c_read_waiting_on_handshake |                              010 |                               01
+c_read_complete_transaction |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' using encoding 'one-hot' in module 'scalp_cplx_num_regs'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                               00 |                               00
+                charging |                               01 |                               01
+               calculing |                               10 |                               10
+                   valid |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_pres_s_reg' using encoding 'sequential' in module 'mandelbrot_seq'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                starting |                               01 |                               01
+               calculing |                               10 |                               10
+                   valid |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_pres_s_reg' using encoding 'sequential' in module 'top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 12    
+	   2 Input    7 Bit       Adders := 1     
+	   8 Input    4 Bit       Adders := 3     
+	   9 Input    4 Bit       Adders := 3     
+	   4 Input    4 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               32 Bit    Registers := 21    
+	               18 Bit    Registers := 4     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 7     
+	                8 Bit    Registers := 15    
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 28    
++---Multipliers : 
+	              10x19  Multipliers := 1     
++---RAMs : 
+	            2025K Bit	(518400 X 4 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   3 Input   32 Bit        Muxes := 2     
+	   5 Input   32 Bit        Muxes := 2     
+	   4 Input   18 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 2     
+	   5 Input   10 Bit        Muxes := 6     
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 11    
+	   2 Input    9 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 26    
+	  16 Input    8 Bit        Muxes := 3     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 12    
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 38    
+	   5 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 18    
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP calc_complex_c/calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_complex_c/calc_z_imag_s is absorbed into DSP calc_complex_c/calc_z_imag_s.
+DSP Report: operator calc_complex_c/calc_z_imag_s0 is absorbed into DSP calc_complex_c/calc_z_imag_s.
+DSP Report: Generating DSP calc_complex_c/calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_complex_c/calc_z_real_s is absorbed into DSP calc_complex_c/calc_z_real_s.
+DSP Report: operator calc_complex_c/calc_z_real_s0 is absorbed into DSP calc_complex_c/calc_z_real_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP mandel_addr_s, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator mandel_addr_s is absorbed into DSP mandel_addr_s.
+DSP Report: operator multOp is absorbed into DSP mandel_addr_s.
+DSP Report: Generating DSP PLxB.ImGenxB.hdmi_addr_s, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator PLxB.ImGenxB.hdmi_addr_s is absorbed into DSP PLxB.ImGenxB.hdmi_addr_s.
+DSP Report: operator multOp is absorbed into DSP PLxB.ImGenxB.hdmi_addr_s.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__0) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__1) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__2) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__0) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__1) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__2) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__3) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__4) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__5) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__6) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__3) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__4) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__5) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__6) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__7) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__8) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__9) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__10) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__11) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__12) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__13) is unused and will be removed from module scalp_user_design.
+WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__14) is unused and will be removed from module scalp_user_design.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:49 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_6 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_6 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_8 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_4 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  calc_complex_c/calc_z_imag_s_2 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_complex_c/calc_z_real_s_0 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  PLxB.ImGenxB.hdmi_addr_s_c : 0 0 : 216 216 : Used 1 time 0
+ Sort Area is  mandel_addr_s_a : 0 0 : 216 216 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scalp_user_design | PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg | 506 K x 4(NO_CHANGE)   | W |   | 506 K x 4(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|scalp_user_design | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:01:05 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scalp_user_design | PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg | 506 K x 4(NO_CHANGE)   | W |   | 506 K x 4(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
++------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:01:07 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|scalp_user_design | Dynamic     | -      | -      | -      | -      | 19     | -    | -    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | (C-(A*B))'  | 6      | 10     | 15     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+------------------------------------------------+----------+
+|      |BlackBox name                                   |Instances |
++------+------------------------------------------------+----------+
+|1     |scalp_zynqps_xbar_0                             |         1|
+|2     |scalp_zynqps_auto_pc_0                          |         1|
+|3     |vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0  |         1|
+|4     |vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0 |         1|
+|5     |vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |         1|
+|6     |scalp_zynqps_axi_gpio_joystick_0                |         1|
+|7     |scalp_zynqps_axi_gpio_reset_btn_0               |         1|
+|8     |scalp_zynqps_axi_gpio_switches_0                |         1|
+|9     |scalp_zynqps_axi_iic_ioext_0                    |         1|
+|10    |scalp_zynqps_axi_intc_0_0                       |         1|
+|11    |scalp_zynqps_processing_system7_0_0             |         1|
+|12    |scalp_zynqps_rst_ps7_0_125M_0                   |         1|
+|13    |scalp_zynqps_scalp_axi_link_cplx_num_regs_0     |         1|
+|14    |scalp_zynqps_scalp_axi_link_firmwareid_0        |         1|
+|15    |scalp_zynqps_sys_clock_0                        |         1|
+|16    |scalp_zynqps_system_ila_0_0                     |         1|
+|17    |pll_mandel                                      |         1|
++------+------------------------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------------------------+------+
+|      |Cell                                                 |Count |
++------+-----------------------------------------------------+------+
+|1     |pll_mandel_bbox                                      |     1|
+|2     |scalp_zynqps_auto_pc_0_bbox                          |     1|
+|3     |scalp_zynqps_axi_gpio_joystick_0_bbox                |     1|
+|4     |scalp_zynqps_axi_gpio_reset_btn_0_bbox               |     1|
+|5     |scalp_zynqps_axi_gpio_switches_0_bbox                |     1|
+|6     |scalp_zynqps_axi_iic_ioext_0_bbox                    |     1|
+|7     |scalp_zynqps_axi_intc_0_0_bbox                       |     1|
+|8     |scalp_zynqps_processing_system7_0_0_bbox             |     1|
+|9     |scalp_zynqps_rst_ps7_0_125M_0_bbox                   |     1|
+|10    |scalp_zynqps_scalp_axi_link_cplx_num_regs_0_bbox     |     1|
+|11    |scalp_zynqps_scalp_axi_link_firmwareid_0_bbox        |     1|
+|12    |scalp_zynqps_sys_clock_0_bbox                        |     1|
+|13    |scalp_zynqps_system_ila_0_0_bbox                     |     1|
+|14    |scalp_zynqps_xbar_0_bbox                             |     1|
+|15    |vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_bbox  |     1|
+|16    |vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_bbox |     1|
+|17    |vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_bbox |     1|
+|18    |CARRY4                                               |    29|
+|19    |DSP48E1                                              |     8|
+|22    |LUT1                                                 |    10|
+|23    |LUT2                                                 |   110|
+|24    |LUT3                                                 |   187|
+|25    |LUT4                                                 |   164|
+|26    |LUT5                                                 |   259|
+|27    |LUT6                                                 |   213|
+|28    |MUXF7                                                |     4|
+|29    |OSERDESE2                                            |     8|
+|31    |RAMB36E1                                             |    64|
+|33    |FDCE                                                 |   248|
+|34    |FDRE                                                 |   554|
+|35    |FDSE                                                 |     6|
+|36    |IBUF                                                 |     8|
+|37    |IOBUF                                                |     2|
+|38    |OBUF                                                 |    10|
+|39    |OBUFDS                                               |     4|
+|40    |OBUFT                                                |     2|
++------+-----------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 160 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:01:10 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1955.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: PSxB.ZynqxI/<const0>.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1955.441 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Le chemin d'accŠs sp‚cifi‚ est introuvable.
+Synth Design complete | Checksum: 107f262c
+INFO: [Common 17-83] Releasing license: Synthesis
+206 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:22 . Memory (MB): peak = 1955.441 ; gain = 1430.828
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1955.441 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/scalp_user_design.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file scalp_user_design_utilization_synth.rpt -pb scalp_user_design_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 28 23:22:19 2024...

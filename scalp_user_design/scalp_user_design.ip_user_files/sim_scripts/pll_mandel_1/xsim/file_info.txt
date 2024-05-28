@@ -1,0 +1,3 @@
+pll_mandel_clk_wiz.v,verilog,xil_defaultlib,../../../../scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel_clk_wiz.v,incdir="../../../ipstatic"incdir="../../../ipstatic"
+pll_mandel.v,verilog,xil_defaultlib,../../../../scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel.v,incdir="../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

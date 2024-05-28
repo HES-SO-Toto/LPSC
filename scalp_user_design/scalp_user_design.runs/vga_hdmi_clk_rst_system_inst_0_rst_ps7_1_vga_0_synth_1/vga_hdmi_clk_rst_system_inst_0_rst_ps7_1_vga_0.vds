@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May 10 00:27:14 2024
+# Process ID: 6308
+# Current directory: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1
+# Command line: vivado.exe -log vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.tcl
+# Log file: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.vds
+# Journal file: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1\vivado.jou
+# Running On: DESKTOP-BKSE7R5, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 453.012 ; gain = 183.160
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/scalp_revc_windows'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 70b7d2bc575d92fe to dir: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/mandelbrot/scalp_user_design/scalp_user_design.cache/ip/2023.2/7/0/70b7d2bc575d92fe/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.dcp to E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/mandelbrot/scalp_user_design/scalp_user_design.cache/ip/2023.2/7/0/70b7d2bc575d92fe/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_sim_netlist.v to E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/mandelbrot/scalp_user_design/scalp_user_design.cache/ip/2023.2/7/0/70b7d2bc575d92fe/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_sim_netlist.vhdl to E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/mandelbrot/scalp_user_design/scalp_user_design.cache/ip/2023.2/7/0/70b7d2bc575d92fe/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.v to E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/mandelbrot/scalp_user_design/scalp_user_design.cache/ip/2023.2/7/0/70b7d2bc575d92fe/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl to E:/mandelbrot/scalp_user_design/scalp_user_design.runs/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_synth_1/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0, cache-ID = 70b7d2bc575d92fe.
+INFO: [Common 17-206] Exiting Vivado at Fri May 10 00:27:26 2024...

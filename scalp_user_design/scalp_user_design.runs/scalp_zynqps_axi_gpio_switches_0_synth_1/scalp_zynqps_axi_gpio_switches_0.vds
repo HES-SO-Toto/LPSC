@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May  7 17:49:20 2024
+# Process ID: 8368
+# Current directory: E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1
+# Command line: vivado.exe -log scalp_zynqps_axi_gpio_switches_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source scalp_zynqps_axi_gpio_switches_0.tcl
+# Log file: E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0.vds
+# Journal file: E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1\vivado.jou
+# Running On: DESKTOP-BKSE7R5, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source scalp_zynqps_axi_gpio_switches_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 452.703 ; gain = 185.973
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/scalp_revc_windows'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'e:/scalp_revc_windows' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'e:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: scalp_zynqps_axi_gpio_switches_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d8b7ca4e7c5d2337 to dir: E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/scalp_revc_windows/scalp_user_design/scalp_user_design.cache/ip/2023.2/d/8/d8b7ca4e7c5d2337/scalp_zynqps_axi_gpio_switches_0.dcp to E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/scalp_revc_windows/scalp_user_design/scalp_user_design.cache/ip/2023.2/d/8/d8b7ca4e7c5d2337/scalp_zynqps_axi_gpio_switches_0_sim_netlist.v to E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/scalp_revc_windows/scalp_user_design/scalp_user_design.cache/ip/2023.2/d/8/d8b7ca4e7c5d2337/scalp_zynqps_axi_gpio_switches_0_sim_netlist.vhdl to E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/scalp_revc_windows/scalp_user_design/scalp_user_design.cache/ip/2023.2/d/8/d8b7ca4e7c5d2337/scalp_zynqps_axi_gpio_switches_0_stub.v to E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/scalp_revc_windows/scalp_user_design/scalp_user_design.cache/ip/2023.2/d/8/d8b7ca4e7c5d2337/scalp_zynqps_axi_gpio_switches_0_stub.vhdl to E:/scalp_revc_windows/scalp_user_design/scalp_user_design.runs/scalp_zynqps_axi_gpio_switches_0_synth_1/scalp_zynqps_axi_gpio_switches_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP scalp_zynqps_axi_gpio_switches_0, cache-ID = d8b7ca4e7c5d2337.
+INFO: [Common 17-206] Exiting Vivado at Tue May  7 17:49:37 2024...

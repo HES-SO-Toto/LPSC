@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/vga_hdmi_clk_rst_system_inst_0/ip/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.gen/sources_1/ip/video_mem_1/sim/video_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_mandel_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.gen/sources_1/ip/pll_mandel_1/pll_mandel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_mandel
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/sim/scalp_zynqps_gnd_constant_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_gnd_constant_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/sim/scalp_zynqps_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_xbar_0/sim/scalp_zynqps_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_auto_pc_0/sim/scalp_zynqps_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/sim/scalp_zynqps_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_sys_clock_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_sys_clock_0/scalp_zynqps_sys_clock_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scalp_zynqps_sys_clock_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/mandelbrot/scalp_user_design/scalp_user_design.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

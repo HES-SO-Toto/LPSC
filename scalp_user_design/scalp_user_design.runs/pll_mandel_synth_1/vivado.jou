@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May 14 18:16:04 2024
+# Process ID: 28540
+# Current directory: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/pll_mandel_synth_1
+# Command line: vivado.exe -log pll_mandel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pll_mandel.tcl
+# Log file: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/pll_mandel_synth_1/pll_mandel.vds
+# Journal file: E:/mandelbrot/scalp_user_design/scalp_user_design.runs/pll_mandel_synth_1\vivado.jou
+# Running On: DESKTOP-BKSE7R5, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source pll_mandel.tcl -notrace
