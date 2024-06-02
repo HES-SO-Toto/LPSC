@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue May 28 23:25:56 2024
+| Date         : Mon Jun  3 01:28:55 2024
 | Host         : DESKTOP-BKSE7R5 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file scalp_user_design_clock_utilization_routed.rpt
 | Design       : scalp_user_design
@@ -59,9 +59,9 @@ Table of Contents
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                                                    | Net                                                                                                                                          |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 | g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |        3522 |               0 |        8.000 | clk_125_scalp_zynqps_sys_clock_0                                                           | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clkout1_buf/O                             | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125                                                                                  |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                          | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                       |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         218 |               0 |       20.833 | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                    | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkout1_buf/O | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga                                                      |
-| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 4 |         157 |               0 |      200.000 | clock_mandel_pll_mandel                                                                    | PLxB.ImGenxB.pll_mandel_inst/inst/clkout1_buf/O                                               | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                                                                               |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 5 |        1424 |               0 |      200.000 | clock_mandel_pll_mandel                                                                    | PLxB.ImGenxB.pll_mandel_inst/inst/clkout1_buf/O                                               | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                                                                               |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                          | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                       |
+| g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         208 |               0 |       20.833 | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                    | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkout1_buf/O | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga                                                      |
 | g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |           8 |               0 |        4.167 | clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                   | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkout2_buf/O | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_hdmi                                                     |
 | g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 1 |           1 |               0 |       40.000 | clkfbout_pll_mandel                                                                        | PLxB.ImGenxB.pll_mandel_inst/inst/clkf_buf/O                                                  | PLxB.ImGenxB.pll_mandel_inst/inst/clkfbout_buf_pll_mandel                                                                                    |
 | g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y20 | n/a          |                 1 |           1 |               0 |        8.000 | clk_fpga_0                                                                                 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clkin1_bufg/O                             | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_in1_scalp_zynqps_sys_clock_0                                                         |
@@ -80,9 +80,9 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                               | Driver Pin                                                                                             | Net                                                                                                                                      |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | src0      | g0        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y2 | X1Y2         |           1 |               0 |               8.000 | clk_125_scalp_zynqps_sys_clock_0                                                           | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/mmcm_adv_inst/CLKOUT0                              | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125_scalp_zynqps_sys_clock_0                                                     |
-| src1      | g1        | BSCANE2/TCK         | None       | BSCAN_X0Y0      | X0Y1         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK             | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                        |
-| src2      | g2        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              20.833 | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                    | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/mmcm_adv_inst/CLKOUT0  | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0  |
-| src3      | g3        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           1 |               0 |             200.000 | clock_mandel_pll_mandel                                                                    | PLxB.ImGenxB.pll_mandel_inst/inst/mmcm_adv_inst/CLKOUT0                                                | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel_pll_mandel                                                                                |
+| src1      | g1        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           1 |               0 |             200.000 | clock_mandel_pll_mandel                                                                    | PLxB.ImGenxB.pll_mandel_inst/inst/mmcm_adv_inst/CLKOUT0                                                | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel_pll_mandel                                                                                |
+| src2      | g2        | BSCANE2/TCK         | None       | BSCAN_X0Y0      | X0Y1         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK             | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                        |
+| src3      | g3        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |              20.833 | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                    | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/mmcm_adv_inst/CLKOUT0  | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0  |
 | src4      | g4        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |               4.167 | clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0                                   | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/mmcm_adv_inst/CLKOUT1  | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_hdmi_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |
 | src5      | g5        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y1 | X1Y1         |           1 |               0 |              40.000 | clkfbout_pll_mandel                                                                        | PLxB.ImGenxB.pll_mandel_inst/inst/mmcm_adv_inst/CLKFBOUT                                               | PLxB.ImGenxB.pll_mandel_inst/inst/clkfbout_pll_mandel                                                                                    |
 | src6      | g6        | PS7/FCLKCLK[0]      | PS7_X0Y0   | PS7_X0Y0        | X0Y2         |           2 |               0 |               8.000 | clk_fpga_0                                                                                 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/processing_system7_0/inst/PS7_i/FCLKCLK[0]                        | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                                    |
@@ -102,12 +102,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3000 |    0 |   900 |    0 |    40 |    4 |    20 |    0 |    40 |
-| X1Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |  1750 |    1 |   600 |    0 |    30 |   10 |    15 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1801 |  1100 |  527 |   300 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  294 |  2300 |   63 |   750 |    0 |    60 |   29 |    30 |    0 |    40 |
-| X0Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  199 |  1100 |   69 |   300 |    0 |     0 |    0 |     0 |    0 |     0 |
-| X1Y2              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1764 |  2300 |  537 |   750 |    0 |    60 |   21 |    30 |    2 |    40 |
+| X0Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  434 |  3000 |  188 |   900 |    0 |    40 |   17 |    20 |   10 |    40 |
+| X1Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  333 |  1750 |  178 |   600 |    0 |    30 |   15 |    15 |    9 |    40 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1532 |  1100 |  472 |   300 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  857 |  2300 |  342 |   750 |    0 |    60 |   24 |    30 |    9 |    40 |
+| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1845 |  1100 |  496 |   300 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X1Y2              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  285 |  2300 |   98 |   750 |    0 |    60 |    8 |    30 |    4 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -139,82 +139,82 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-------+-----------------------+
-|    | X0    | X1    | HORIZONTAL PROG DELAY |
-+----+-------+-------+-----------------------+
-| Y2 |   213 |  1260 |                     0 |
-| Y1 |  1872 |   138 |                     0 |
-| Y0 |     0 |     0 |                     - |
-+----+-------+-------+-----------------------+
++----+-------+------+-----------------------+
+|    | X0    | X1   | HORIZONTAL PROG DELAY |
++----+-------+------+-----------------------+
+| Y2 |  1449 |  137 |                     0 |
+| Y1 |  1528 |  369 |                     0 |
+| Y0 |     0 |    0 |                     - |
++----+-------+------+-----------------------+
 
 
 7. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
-+-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
-| g1        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         458 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
-+-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
++-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
++-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
+| g1        | BUFG/O          | n/a               | clock_mandel_pll_mandel |     200.000 | {0.000 100.000} |        1424 |        0 |              0 |        0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel |
++-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |  458 |                     0 |
-| Y1 |  0 |    0 |                     - |
-| Y0 |  0 |    0 |                     - |
-+----+----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |  150 |                     0 |
+| Y1 |   51 |  405 |                     0 |
+| Y0 |  461 |  357 |                     0 |
++----+------+------+-----------------------+
 
 
 8. Device Cell Placement Summary for Global Clock g2
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                   | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                     |
-+-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
-| g2        | BUFG/O          | n/a               | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |      20.833 | {0.000 10.417} |         210 |        8 |              0 |        0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga |
-+-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
+| g2        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         458 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |   21 |                     0 |
-| Y1 |  0 |  182 |                     0 |
-| Y0 |  4 |   11 |                     0 |
-+----+----+------+-----------------------+
++----+------+-----+-----------------------+
+|    | X0   | X1  | HORIZONTAL PROG DELAY |
++----+------+-----+-----------------------+
+| Y2 |  443 |  15 |                     0 |
+| Y1 |    0 |   0 |                     - |
+| Y0 |    0 |   0 |                     - |
++----+------+-----+-----------------------+
 
 
 9. Device Cell Placement Summary for Global Clock g3
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock                   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
-+-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
-| g3        | BUFG/O          | n/a               | clock_mandel_pll_mandel |     200.000 | {0.000 100.000} |         157 |        0 |              0 |        0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel |
-+-----------+-----------------+-------------------+-------------------------+-------------+-----------------+-------------+----------+----------------+----------+------------------------------------------------+
++-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                   | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                     |
++-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
+| g3        | BUFG/O          | n/a               | clk_vga_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |      20.833 | {0.000 10.417} |         200 |        8 |              0 |        0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga |
++-----------+-----------------+-------------------+---------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |  101 |                     0 |
-| Y1 |  0 |   42 |                     0 |
-| Y0 |  4 |   10 |                     0 |
-+----+----+------+-----------------------+
++----+-----+------+-----------------------+
+|    | X0  | X1   | HORIZONTAL PROG DELAY |
++----+-----+------+-----------------------+
+| Y2 |   0 |    8 |                     0 |
+| Y1 |   0 |  168 |                     0 |
+| Y0 |  17 |   15 |                     0 |
++----+-----+------+-----------------------+
 
 
 10. Device Cell Placement Summary for Global Clock g4
@@ -358,14 +358,14 @@ All Modules
 16. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                          |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| g2        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |           0 |    4 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga                                                      |
-| g3        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |           0 |    4 |   0 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                                                                               |
-| g7        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_in1_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0      |
-| g9        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkfbout_buf_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                          |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
+| g1        | n/a   | BUFG/O          | None       |         461 |               0 | 434 |           0 |   17 |  10 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                                                                               |
+| g3        | n/a   | BUFG/O          | None       |          17 |               0 |   0 |           0 |   17 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga                                                      |
+| g7        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_in1_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0      |
+| g9        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkfbout_buf_vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -374,12 +374,12 @@ All Modules
 17. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                     |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
-| g2        | n/a   | BUFG/O          | None       |          11 |               0 |  1 |           0 |   10 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga |
-| g3        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |           0 |   10 |   0 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                          |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
+| g1        | n/a   | BUFG/O          | None       |         357 |               0 | 333 |           0 |   15 |   9 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                          |
+| g3        | n/a   | BUFG/O          | None       |          15 |               0 |   0 |           0 |   15 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -391,7 +391,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1872 |               0 | 1801 |          71 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125 |
+| g0        | n/a   | BUFG/O          | None       |        1528 |               0 | 1481 |          47 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125 |
+| g1        | n/a   | BUFG/O          | None       |          51 |               0 |   51 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel              |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -404,9 +405,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         138 |               0 | 137 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125                              |
-| g2        | n/a   | BUFG/O          | None       |         182 |               0 | 144 |           1 |   29 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga  |
-| g3        | n/a   | BUFG/O          | None       |          42 |               0 |  13 |           0 |   29 |   0 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                           |
+| g0        | n/a   | BUFG/O          | None       |         369 |               0 | 350 |          18 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125                              |
+| g1        | n/a   | BUFG/O          | None       |         405 |               0 | 372 |           0 |   24 |   9 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                           |
+| g3        | n/a   | BUFG/O          | None       |         168 |               0 | 135 |           1 |   24 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga  |
 | g4        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_hdmi |
 | g5        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clkfbout_buf_pll_mandel                                |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------+
@@ -418,11 +419,12 @@ All Modules
 20. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                         |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         213 |               0 | 199 |          13 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125 |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        1449 |               0 | 1402 |          46 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125 |
+| g2        | n/a   | BUFG/O          | None       |         443 |               0 |  443 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -431,16 +433,16 @@ All Modules
 21. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1260 |               0 | 1228 |          31 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125                               |
-| g1        | n/a   | BUFG/O          | None       |         458 |               0 |  458 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                    |
-| g2        | n/a   | BUFG/O          | None       |          21 |               0 |    0 |           0 |   21 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga   |
-| g3        | n/a   | BUFG/O          | None       |         101 |               0 |   78 |           0 |   21 |   2 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                            |
-| g6        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_in1_scalp_zynqps_sys_clock_0      |
-| g8        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clkfbout_buf_scalp_zynqps_sys_clock_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         137 |               0 | 132 |           4 |    0 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_125                               |
+| g1        | n/a   | BUFG/O          | None       |         150 |               0 | 138 |           0 |    8 |   4 |  0 |    0 |   0 |       0 | PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel                                            |
+| g2        | n/a   | BUFG/O          | None       |          15 |               0 |  15 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                    |
+| g3        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |           0 |    8 |   0 |  0 |    0 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga   |
+| g6        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clk_in1_scalp_zynqps_sys_clock_0      |
+| g8        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock/inst/clkfbout_buf_scalp_zynqps_sys_clock_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -467,7 +469,7 @@ set_property LOC BUFGCTRL_X0Y18 [get_cells PLxB.ImGenxB.pll_mandel_inst/inst/clk
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clk_vga" driven by instance "PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/vga_hdmi_clk_rst_sys_0/vga_hdmi_clock/inst/clkout1_buf" located at site "BUFGCTRL_X0Y0"
@@ -495,5 +497,5 @@ resize_pblock [get_pblocks {CLKAG_PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/sys_clock
 #startgroup
 create_pblock {CLKAG_PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel}
 add_cells_to_pblock [get_pblocks  {CLKAG_PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel"}]]]
-resize_pblock [get_pblocks {CLKAG_PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_PLxB.ImGenxB.pll_mandel_inst/inst/clock_mandel}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup

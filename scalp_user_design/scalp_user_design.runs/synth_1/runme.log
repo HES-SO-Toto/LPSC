@@ -14,11 +14,9 @@ Commande ECHO d‚sactiv‚e.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source scalp_user_design.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 453.742 ; gain = 186.414
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/scalp_revc_windows'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
-add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 510.531 ; gain = 52.840
 Command: read_checkpoint -auto_incremental -incremental E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/utils_1/imports/synth_1/scalp_user_design.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/utils_1/imports/synth_1/scalp_user_design.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -31,12 +29,12 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7196
+INFO: [Synth 8-7075] Helper process launched with PID 10332
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1377.676 ; gain = 441.828
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1377.035 ; gain = 440.434
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-9696] invalid to access 'ramfile' from inside pure function 'initramfromfile'. [E:/mandelbrot/LPSC/Bram.vhd:52]
-WARNING: [Synth 8-9222] cannot call impure function 'initramfromfile' from within pure function 'init_from_file_or_zeroes' [E:/mandelbrot/LPSC/Bram.vhd:62]
+WARNING: [Synth 8-9696] invalid to access 'ramfile' from inside pure function 'initramfromfile'. [E:/mandelbrot/files_antonin/Bram.vhd:52]
+WARNING: [Synth 8-9222] cannot call impure function 'initramfromfile' from within pure function 'init_from_file_or_zeroes' [E:/mandelbrot/files_antonin/Bram.vhd:62]
 INFO: [Synth 8-638] synthesizing module 'scalp_user_design' [E:/mandelbrot/files/scalp_user_design.vhd:311]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_wrapper' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:101]
 	Parameter C_AXI4_ARADDR_SIZE bound to: 32 - type: integer 
@@ -57,23 +55,23 @@ INFO: [Synth 8-113] binding component instance 'IoExtIICSclxI' to cell 'IOBUF' [
 	Parameter SLEW bound to: FAST - type: string 
 INFO: [Synth 8-113] binding component instance 'IoExtIICSdaxI' to cell 'IOBUF' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd:131]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2347]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_joystick_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:6' bound to instance 'axi_gpio_joystick' of component 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3127]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_reset_btn_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:6' bound to instance 'axi_gpio_reset_btn' of component 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3151]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_switches_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:6' bound to instance 'axi_gpio_switches' of component 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3174]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_iic_ioext_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:6' bound to instance 'axi_iic_ioext' of component 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3198]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'scalp_zynqps_axi_intc_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:6' bound to instance 'axi_intc_0' of component 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3228]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_joystick_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:6' bound to instance 'axi_gpio_joystick' of component 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3127]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_joystick_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_joystick_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_reset_btn_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:6' bound to instance 'axi_gpio_reset_btn' of component 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3151]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_reset_btn_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_reset_btn_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_gpio_switches_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:6' bound to instance 'axi_gpio_switches' of component 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3174]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_gpio_switches_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_gpio_switches_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_iic_ioext_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:6' bound to instance 'axi_iic_ioext' of component 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3198]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_iic_ioext_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_iic_ioext_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'scalp_zynqps_axi_intc_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:6' bound to instance 'axi_intc_0' of component 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3228]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_axi_intc_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_axi_intc_0_0_stub.vhdl:33]
 INFO: [Synth 8-3491] module 'scalp_zynqps_gnd_constant_0' declared at 'e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53' bound to instance 'gnd_constant' of component 'scalp_zynqps_gnd_constant_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3252]
 INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_gnd_constant_0' [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [e:/mandelbrot/scalp_zynqps/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [e:/mandelbrot/scalp_zynqps/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'scalp_zynqps_gnd_constant_0' (0#1) [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_gnd_constant_0/synth/scalp_zynqps_gnd_constant_0.v:53]
-INFO: [Synth 8-3491] module 'scalp_zynqps_processing_system7_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3256]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:92]
+INFO: [Synth 8-3491] module 'scalp_zynqps_processing_system7_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3256]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_processing_system7_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_processing_system7_0_0_stub.vhdl:92]
 INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:1218]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_FF8Z4U' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_FF8Z4U' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:58]
@@ -90,30 +88,30 @@ INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_YFU1B2' (0#1) [E:
 INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_J98Y8U' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:664]
 INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_J98Y8U' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:664]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_BVJLL9' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:788]
-INFO: [Synth 8-3491] module 'scalp_zynqps_auto_pc_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:971]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'scalp_zynqps_auto_pc_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:971]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_auto_pc_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_BVJLL9' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:788]
-INFO: [Synth 8-3491] module 'scalp_zynqps_xbar_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2105]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'scalp_zynqps_xbar_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:2105]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_xbar_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_xbar_0_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 'scalp_zynqps_ps7_0_axi_periph_0' (0#1) [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:1218]
-INFO: [Synth 8-3491] module 'scalp_zynqps_rst_ps7_0_125M_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_125M' of component 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3517]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:6' bound to instance 'scalp_axi_link_cplx_num_regs' of component 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3530]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_firmwareid_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:6' bound to instance 'scalp_axi_link_firmwareid' of component 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3571]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'scalp_zynqps_sys_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:6' bound to instance 'sys_clock' of component 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3612]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'scalp_zynqps_system_ila_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3619]
-INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'scalp_zynqps_rst_ps7_0_125M_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_125M' of component 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3517]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_rst_ps7_0_125M_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_rst_ps7_0_125M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:6' bound to instance 'scalp_axi_link_cplx_num_regs' of component 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3530]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_cplx_num_regs_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_cplx_num_regs_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'scalp_zynqps_scalp_axi_link_firmwareid_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:6' bound to instance 'scalp_axi_link_firmwareid' of component 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3571]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_scalp_axi_link_firmwareid_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_scalp_axi_link_firmwareid_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'scalp_zynqps_sys_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:6' bound to instance 'sys_clock' of component 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3612]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_sys_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_sys_clock_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'scalp_zynqps_system_ila_0_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3619]
+INFO: [Synth 8-638] synthesizing module 'scalp_zynqps_system_ila_0_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/scalp_zynqps_system_ila_0_0_stub.vhdl:15]
 INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0' declared at 'E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:15' bound to instance 'vga_hdmi_clk_rst_sys_0' of component 'vga_hdmi_clk_rst_system_inst_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3628]
 INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:6' bound to instance 'rst_ps7_1_vga' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:114]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:6' bound to instance 'rst_ps7_2_hdmi' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:127]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:6' bound to instance 'vga_hdmi_clock' of component 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:140]
-INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:6' bound to instance 'rst_ps7_1_vga' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:6' bound to instance 'rst_ps7_2_hdmi' of component 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:6' bound to instance 'vga_hdmi_clock' of component 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'vga_hdmi_clk_rst_system_inst_0' (0#1) [E:/mandelbrot/scalp_zynqps/bd/vga_hdmi_clk_rst_system_inst_0/synth/vga_hdmi_clk_rst_system_inst_0.vhd:33]
 INFO: [Synth 8-3491] module 'scalp_zynqps_xlconcat_0_0' declared at 'e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'scalp_zynqps_xlconcat_0_0' [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3640]
 INFO: [Synth 8-6157] synthesizing module 'scalp_zynqps_xlconcat_0_0' [e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xlconcat_0_0/synth/scalp_zynqps_xlconcat_0_0.v:53]
@@ -236,72 +234,229 @@ INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxCNxI' to cell 'OBUFD
 INFO: [Synth 8-113] binding component instance 'OBufDSHdmiTxC3xI' to cell 'OBUFDS' [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:172]
 INFO: [Synth 8-256] done synthesizing module 'vga_to_hdmi' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'scalp_hdmi' (0#1) [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd:52]
-INFO: [Synth 8-3491] module 'pll_mandel' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:6' bound to instance 'pll_mandel_inst' of component 'pll_mandel' [E:/mandelbrot/files/scalp_user_design.vhd:921]
-INFO: [Synth 8-638] synthesizing module 'pll_mandel' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-1148-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:16]
-	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'pll_mandel' declared at 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:6' bound to instance 'pll_mandel_inst' of component 'pll_mandel' [E:/mandelbrot/files/scalp_user_design.vhd:898]
+INFO: [Synth 8-638] synthesizing module 'pll_mandel' [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/.Xil/Vivado-20496-DESKTOP-BKSE7R5/realtime/pll_mandel_stub.vhdl:16]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
 	Parameter COMMA bound to: 14 - type: integer 
 	Parameter DATASIZE bound to: 18 - type: integer 
 	Parameter N_ITER bound to: 100 - type: integer 
 	Parameter SIZE_ITER bound to: 7 - type: integer 
 	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
-	Parameter SCREEN_Y_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
 	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/LPSC/top.vhd:27' bound to instance 'mandelbrot_top_inst' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:932]
-INFO: [Synth 8-638] synthesizing module 'top' [E:/mandelbrot/LPSC/top.vhd:55]
-	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-638] synthesizing module 'top' [E:/mandelbrot/files_antonin/top.vhd:54]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
 	Parameter COMMA bound to: 14 - type: integer 
 	Parameter DATASIZE bound to: 18 - type: integer 
 	Parameter N_ITER bound to: 100 - type: integer 
 	Parameter SIZE_ITER bound to: 7 - type: integer 
 	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
-	Parameter SCREEN_Y_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
 	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [E:/mandelbrot/LPSC/top.vhd:148]
+INFO: [Synth 8-226] default block is never used [E:/mandelbrot/files_antonin/top.vhd:155]
 	Parameter COMMA bound to: 14 - type: integer 
 	Parameter SIZE bound to: 18 - type: integer 
 	Parameter N_ITER bound to: 100 - type: integer 
 	Parameter SIZE_ITER bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'mandelbrot_seq' declared at 'E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:23' bound to instance 'mandelbrot_seq_inst' of component 'mandelbrot_seq' [E:/mandelbrot/LPSC/top.vhd:179]
-INFO: [Synth 8-638] synthesizing module 'mandelbrot_seq' [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:42]
+INFO: [Synth 8-3491] module 'mandelbrot_seq' declared at 'E:/mandelbrot/files_antonin/mandelbrot_sequ.vhd:23' bound to instance 'mandelbrot_seq_inst' of component 'mandelbrot_seq' [E:/mandelbrot/files_antonin/top.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'mandelbrot_seq' [E:/mandelbrot/files_antonin/mandelbrot_sequ.vhd:42]
 	Parameter COMMA bound to: 14 - type: integer 
 	Parameter SIZE bound to: 18 - type: integer 
 	Parameter N_ITER bound to: 100 - type: integer 
 	Parameter SIZE_ITER bound to: 7 - type: integer 
-INFO: [Synth 8-226] default block is never used [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:100]
-INFO: [Synth 8-256] done synthesizing module 'mandelbrot_seq' (0#1) [E:/mandelbrot/LPSC/mandelbrot_sequ.vhd:42]
+INFO: [Synth 8-226] default block is never used [E:/mandelbrot/files_antonin/mandelbrot_sequ.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'mandelbrot_seq' (0#1) [E:/mandelbrot/files_antonin/mandelbrot_sequ.vhd:42]
 	Parameter DATASIZE bound to: 18 - type: integer 
-	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
 	Parameter X bound to: 720 - type: integer 
-	Parameter Y bound to: 720 - type: integer 
-INFO: [Synth 8-3491] module 'calc_complex' declared at 'E:/mandelbrot/LPSC/calc_complex.vhd:23' bound to instance 'calc_complex_c' of component 'calc_complex' [E:/mandelbrot/LPSC/top.vhd:196]
-INFO: [Synth 8-638] synthesizing module 'calc_complex' [E:/mandelbrot/LPSC/calc_complex.vhd:48]
+	Parameter Y bound to: 45 - type: integer 
+INFO: [Synth 8-3491] module 'calc_complex' declared at 'E:/mandelbrot/files_antonin/calc_complex.vhd:26' bound to instance 'calc_complex_c' of component 'calc_complex' [E:/mandelbrot/files_antonin/top.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'calc_complex' [E:/mandelbrot/files_antonin/calc_complex.vhd:51]
 	Parameter DATASIZE bound to: 18 - type: integer 
-	Parameter SIZE_PIXEL bound to: 10 - type: integer 
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
 	Parameter X bound to: 720 - type: integer 
-	Parameter Y bound to: 720 - type: integer 
+	Parameter Y bound to: 45 - type: integer 
 	Parameter Nmax bound to: 720 - type: integer 
-	Parameter Nbit bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/LPSC/compteur.vhd:23' bound to instance 'counter_x_c' of component 'counter' [E:/mandelbrot/LPSC/calc_complex.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'counter' [E:/mandelbrot/LPSC/compteur.vhd:37]
+	Parameter Nbit bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/files_antonin/compteur.vhd:23' bound to instance 'counter_x_c' of component 'counter' [E:/mandelbrot/files_antonin/calc_complex.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'counter' [E:/mandelbrot/files_antonin/compteur.vhd:37]
 	Parameter Nmax bound to: 720 - type: integer 
-	Parameter Nbit bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [E:/mandelbrot/LPSC/compteur.vhd:37]
-	Parameter Nmax bound to: 720 - type: integer 
-	Parameter Nbit bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/LPSC/compteur.vhd:23' bound to instance 'counter_y_c' of component 'counter' [E:/mandelbrot/LPSC/calc_complex.vhd:120]
-INFO: [Synth 8-256] done synthesizing module 'calc_complex' (0#1) [E:/mandelbrot/LPSC/calc_complex.vhd:48]
+	Parameter Nbit bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [E:/mandelbrot/files_antonin/compteur.vhd:37]
+	Parameter Nmax bound to: 45 - type: integer 
+	Parameter Nbit bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'counter' declared at 'E:/mandelbrot/files_antonin/compteur.vhd:23' bound to instance 'counter_y_c' of component 'counter' [E:/mandelbrot/files_antonin/calc_complex.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized1' [E:/mandelbrot/files_antonin/compteur.vhd:37]
+	Parameter Nmax bound to: 45 - type: integer 
+	Parameter Nbit bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized1' (0#1) [E:/mandelbrot/files_antonin/compteur.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'calc_complex' (0#1) [E:/mandelbrot/files_antonin/calc_complex.vhd:51]
 	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
-	Parameter C_RAM_DEPTH bound to: 518400 - type: integer 
-INFO: [Synth 8-3491] module 'bram' declared at 'E:/mandelbrot/LPSC/Bram.vhd:17' bound to instance 'my_Bram_inst' of component 'Bram' [E:/mandelbrot/LPSC/top.vhd:223]
-INFO: [Synth 8-638] synthesizing module 'bram' [E:/mandelbrot/LPSC/Bram.vhd:37]
+	Parameter C_RAM_DEPTH bound to: 32400 - type: integer 
+INFO: [Synth 8-3491] module 'bram' declared at 'E:/mandelbrot/files_antonin/Bram.vhd:17' bound to instance 'my_Bram_inst' of component 'Bram' [E:/mandelbrot/files_antonin/top.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'bram' [E:/mandelbrot/files_antonin/Bram.vhd:37]
 	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
-	Parameter C_RAM_DEPTH bound to: 518400 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'bram' (0#1) [E:/mandelbrot/LPSC/Bram.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [E:/mandelbrot/LPSC/top.vhd:55]
+	Parameter C_RAM_DEPTH bound to: 32400 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'bram' (0#1) [E:/mandelbrot/files_antonin/Bram.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [E:/mandelbrot/files_antonin/top.vhd:54]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
+	Parameter SIZE_PIXEL bound to: 9 - type: integer 
+	Parameter COMMA bound to: 14 - type: integer 
+	Parameter DATASIZE bound to: 18 - type: integer 
+	Parameter N_ITER bound to: 100 - type: integer 
+	Parameter SIZE_ITER bound to: 7 - type: integer 
+	Parameter SCREEN_X_SIZE bound to: 720 - type: integer 
+	Parameter SCREEN_Y_SIZE bound to: 45 - type: integer 
+	Parameter C_RAM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'top' declared at 'E:/mandelbrot/files_antonin/top.vhd:27' bound to instance 'mandel' of component 'top' [E:/mandelbrot/files/scalp_user_design.vhd:911]
 INFO: [Synth 8-256] done synthesizing module 'scalp_user_design' (0#1) [E:/mandelbrot/files/scalp_user_design.vhd:311]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [E:/mandelbrot/scalp_zynqps/synth/scalp_zynqps.vhd:3640]
 WARNING: [Synth 8-3848] Net VgaPixCounterxDO[VidOnxS] in module/entity vga_stripes does not have driver. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_stripes.vhd:39]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'calc_complex_c'. This will prevent further optimization [E:/mandelbrot/files_antonin/top.vhd:203]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'my_Bram_inst'. This will prevent further optimization [E:/mandelbrot/files_antonin/top.vhd:230]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PSxB.ZynqxI'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:510]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[0].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[1].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[2].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[3].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[4].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[5].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[6].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[7].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[8].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[9].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[10].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[11].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[12].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[13].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[14].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLxB.ImGenxB.loop_top[15].mandel'. This will prevent further optimization [E:/mandelbrot/files/scalp_user_design.vhd:911]
 WARNING: [Synth 8-3848] Net Pll2V5GOExSO in module/entity scalp_user_design does not have driver. [E:/mandelbrot/files/scalp_user_design.vhd:88]
 WARNING: [Synth 8-3848] Net Pll2V5SyncxSO in module/entity scalp_user_design does not have driver. [E:/mandelbrot/files/scalp_user_design.vhd:90]
 WARNING: [Synth 8-7129] Port ena in module bram is either unconnected or has no load
@@ -406,18 +561,18 @@ WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_5_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1536.324 ; gain = 599.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1536.324 ; gain = 599.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1536.324 ; gain = 599.723
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1955.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1536.324 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -521,27 +676,27 @@ Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1
 Finished Parsing XDC File [E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1955.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1613.156 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 Le chemin d'accŠs sp‚cifi‚ est introuvable.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1955.441 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1613.156 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_joystick' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_reset_btn' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'PSxB.ZynqxI/PlatformxB.ScalpZynqPSxI/axi_gpio_switches' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -829,7 +984,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZy
 Applied set_property KEEP_HIERARCHY = SOFT for \PSxB.ZynqxI /\PlatformxB.ScalpZynqPSxI /vga_hdmi_clk_rst_sys_0/rst_ps7_2_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \PLxB.ImGenxB.pll_mandel_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3936] Found unconnected internal register 'AxiLitexB.WriteChanxB.WriteM2SRegPortxD_reg[WrAddrxD]' and it is trimmed from '32' to '12' bits. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd:264]
 INFO: [Synth 8-802] inferred FSM for state register 'AxiLitexB.ReadChanxB.ReadStatexD_reg' in module 'scalp_firmwareid'
@@ -890,19 +1045,19 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_pres_s_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_pres_s_reg' using encoding 'sequential' in module 'top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   19 Bit       Adders := 1     
-	   2 Input   18 Bit       Adders := 2     
+	   2 Input   18 Bit       Adders := 32    
 	   2 Input   16 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 32    
 	   2 Input    8 Bit       Adders := 12    
-	   2 Input    7 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 16    
 	   8 Input    4 Bit       Adders := 3     
 	   9 Input    4 Bit       Adders := 3     
 	   4 Input    4 Bit       Adders := 3     
@@ -911,40 +1066,40 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 42    
 +---Registers : 
 	               32 Bit    Registers := 21    
-	               18 Bit    Registers := 4     
+	               18 Bit    Registers := 64    
 	               16 Bit    Registers := 2     
 	               12 Bit    Registers := 2     
-	               10 Bit    Registers := 7     
+	               10 Bit    Registers := 67    
 	                8 Bit    Registers := 15    
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 6     
+	                7 Bit    Registers := 16    
+	                4 Bit    Registers := 21    
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 28    
+	                1 Bit    Registers := 73    
 +---Multipliers : 
-	              10x19  Multipliers := 1     
+	              10x15  Multipliers := 1     
 +---RAMs : 
-	            2025K Bit	(518400 X 4 bit)          RAMs := 1     
+	             126K Bit	(32400 X 4 bit)          RAMs := 16    
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 6     
 	   3 Input   32 Bit        Muxes := 2     
 	   5 Input   32 Bit        Muxes := 2     
-	   4 Input   18 Bit        Muxes := 2     
+	   4 Input   18 Bit        Muxes := 32    
 	   2 Input   16 Bit        Muxes := 4     
 	   2 Input   12 Bit        Muxes := 2     
 	   5 Input   10 Bit        Muxes := 6     
 	   4 Input   10 Bit        Muxes := 3     
-	   2 Input   10 Bit        Muxes := 11    
+	   2 Input   10 Bit        Muxes := 41    
 	   2 Input    9 Bit        Muxes := 6     
 	   2 Input    8 Bit        Muxes := 26    
 	  16 Input    8 Bit        Muxes := 3     
-	   4 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 16    
 	   2 Input    4 Bit        Muxes := 12    
-	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 32    
+	   2 Input    2 Bit        Muxes := 48    
 	   3 Input    1 Bit        Muxes := 38    
 	   5 Input    1 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 18    
-	   4 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 48    
+	   4 Input    1 Bit        Muxes := 80    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -961,12 +1116,12 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP calc_complex_c/calc_z_imag_s, operation Mode is: C-A*B.
-DSP Report: operator calc_complex_c/calc_z_imag_s is absorbed into DSP calc_complex_c/calc_z_imag_s.
-DSP Report: operator calc_complex_c/calc_z_imag_s0 is absorbed into DSP calc_complex_c/calc_z_imag_s.
-DSP Report: Generating DSP calc_complex_c/calc_z_real_s, operation Mode is: C+A*B.
-DSP Report: operator calc_complex_c/calc_z_real_s is absorbed into DSP calc_complex_c/calc_z_real_s.
-DSP Report: operator calc_complex_c/calc_z_real_s0 is absorbed into DSP calc_complex_c/calc_z_real_s.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
 DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
 DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
 DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
@@ -977,57 +1132,438 @@ DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DS
 DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
 DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
 DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
-DSP Report: Generating DSP mandel_addr_s, operation Mode is: C+A*(B:0x2d0).
-DSP Report: operator mandel_addr_s is absorbed into DSP mandel_addr_s.
-DSP Report: operator multOp is absorbed into DSP mandel_addr_s.
-DSP Report: Generating DSP PLxB.ImGenxB.hdmi_addr_s, operation Mode is: C+A*(B:0x2d0).
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP calc_z_real_s, operation Mode is: C+A*B.
+DSP Report: operator calc_z_real_s is absorbed into DSP calc_z_real_s.
+DSP Report: operator calc_z_real_s0 is absorbed into DSP calc_z_real_s.
+DSP Report: Generating DSP calc_z_imag_s, operation Mode is: C-A*B.
+DSP Report: operator calc_z_imag_s is absorbed into DSP calc_z_imag_s.
+DSP Report: operator calc_z_imag_s0 is absorbed into DSP calc_z_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_reel_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_reel_s is absorbed into DSP mandelbrot_seq_inst/power_z_reel_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/power_z_real_minus_imag_s, operation Mode is: C-A*B.
+DSP Report: operator mandelbrot_seq_inst/power_z_real_minus_imag_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/power_z_real_minus_imag_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/mult_z_reel_image_s, operation Mode is: A*B.
+DSP Report: operator mandelbrot_seq_inst/mult_z_reel_image_s is absorbed into DSP mandelbrot_seq_inst/mult_z_reel_image_s.
+DSP Report: Generating DSP mandelbrot_seq_inst/euclidean_distance_s, operation Mode is: PCIN+A*B.
+DSP Report: operator mandelbrot_seq_inst/euclidean_distance_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: operator mandelbrot_seq_inst/power_z_im_s is absorbed into DSP mandelbrot_seq_inst/euclidean_distance_s.
+DSP Report: Generating DSP in00, operation Mode is: C+A*(B:0x2d0).
+DSP Report: operator in00 is absorbed into DSP in00.
+DSP Report: operator multOp is absorbed into DSP in00.
+DSP Report: Generating DSP PLxB.ImGenxB.hdmi_addr_s, operation Mode is: C+(A:0x2d0)*B.
 DSP Report: operator PLxB.ImGenxB.hdmi_addr_s is absorbed into DSP PLxB.ImGenxB.hdmi_addr_s.
 DSP Report: operator multOp is absorbed into DSP PLxB.ImGenxB.hdmi_addr_s.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__0) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__1) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__2) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__0) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__1) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__2) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__3) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__4) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__5) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__6) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__3) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__4) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__5) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_1__6) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__7) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__8) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__9) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__10) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__11) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__12) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__13) is unused and will be removed from module scalp_user_design.
-WARNING: [Synth 8-3332] Sequential element (PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_mux_sel_a_pos_2__14) is unused and will be removed from module scalp_user_design.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:49 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_15 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_15 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_1b : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_1b : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_21 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_21 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_27 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_27 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_2d : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_2d : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_33 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_33 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_39 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_39 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_3f : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_3f : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_45 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_45 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_4b : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_4b : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_51 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_51 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_57 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_57 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_5d : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_5d : 0 1 : 2585 5063 : Used 1 time 100
  Sort Area is  mandelbrot_seq_inst/power_z_reel_s_6 : 0 0 : 2478 5063 : Used 1 time 100
  Sort Area is  mandelbrot_seq_inst/power_z_reel_s_6 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_63 : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_63 : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_f : 0 0 : 2478 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_reel_s_f : 0 1 : 2585 5063 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_10 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_16 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_1c : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_22 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_28 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_2e : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_34 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_3a : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_40 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_46 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_4c : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_52 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_58 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_5e : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_64 : 0 0 : 2700 2700 : Used 1 time 100
  Sort Area is  mandelbrot_seq_inst/power_z_real_minus_imag_s_8 : 0 0 : 2700 2700 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_14 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_1a : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_20 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_26 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_2c : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_32 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_38 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_3e : 0 0 : 2478 2478 : Used 1 time 100
  Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_4 : 0 0 : 2478 2478 : Used 1 time 100
- Sort Area is  calc_complex_c/calc_z_imag_s_2 : 0 0 : 1335 1335 : Used 1 time 0
- Sort Area is  calc_complex_c/calc_z_real_s_0 : 0 0 : 1264 1264 : Used 1 time 0
- Sort Area is  PLxB.ImGenxB.hdmi_addr_s_c : 0 0 : 216 216 : Used 1 time 0
- Sort Area is  mandel_addr_s_a : 0 0 : 216 216 : Used 1 time 0
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_44 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_4a : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_50 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_56 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_5c : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_62 : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  mandelbrot_seq_inst/mult_z_reel_image_s_e : 0 0 : 2478 2478 : Used 1 time 100
+ Sort Area is  calc_z_imag_s_13 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_19 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_1f : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_2 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_25 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_2b : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_31 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_37 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_3d : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_43 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_49 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_4f : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_55 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_5b : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_61 : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_imag_s_d : 0 0 : 1335 1335 : Used 1 time 0
+ Sort Area is  calc_z_real_s_0 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_12 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_18 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_1e : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_24 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_2a : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_30 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_36 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_3c : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_42 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_48 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_4e : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_54 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_5a : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_60 : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  calc_z_real_s_c : 0 0 : 1264 1264 : Used 1 time 0
+ Sort Area is  in00_11 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_17 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_1d : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_23 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_29 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_2f : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_35 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_3b : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_41 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_47 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_4d : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_53 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_59 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_5f : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_65 : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  in00_a : 0 0 : 219 219 : Used 1 time 0
+ Sort Area is  PLxB.ImGenxB.hdmi_addr_s_66 : 0 0 : 156 156 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|scalp_user_design | PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg | 506 K x 4(NO_CHANGE)   | W |   | 506 K x 4(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
@@ -1035,14 +1571,119 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name       | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|scalp_user_design | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C+A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|calc_complex      | C-A*B         | 18     | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-A*B         | 18     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B           | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B      | 18     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top               | C+A*(B:0x2d0) | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|scalp_user_design | C+(A:0x2d0)*B | 6      | 10     | 10     | -      | 15     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -1053,24 +1694,39 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1613.402 ; gain = 676.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:01:05 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 1737.035 ; gain = 800.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                                                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|scalp_user_design | PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg | 506 K x 4(NO_CHANGE)   | W |   | 506 K x 4(WRITE_FIRST) |   | R | Port A and B     | 0      | 64     | 
-+------------------+------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
+|top:/my_Bram_inst | ram_name_reg | 31 K x 4(NO_CHANGE)    | W |   | 31 K x 4(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
++------------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1078,40 +1734,72 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_11_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_13_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.mandelbrot_top_inst/my_Bram_inst/ram_name_reg_15_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[0].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[0].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[0].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[0].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[1].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[1].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[1].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[1].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[2].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[2].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[2].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[2].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[3].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[3].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[3].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[3].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[4].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[4].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[4].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[4].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[5].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[5].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[5].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[5].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[6].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[6].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[6].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[6].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[7].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[7].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[7].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[7].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[8].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[8].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[8].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[8].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[9].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[9].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[9].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[9].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[10].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[10].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[10].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[10].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[11].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[11].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[11].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[11].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[12].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[12].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[12].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[12].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[13].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[13].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[13].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[13].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[14].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[14].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[14].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[14].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[15].mandel/my_Bram_inst/ram_name_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[15].mandel/my_Bram_inst/ram_name_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[15].mandel/my_Bram_inst/ram_name_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance PLxB.ImGenxB.loop_top[15].mandel/my_Bram_inst/ram_name_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:01:07 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1129,37 +1817,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1169,14 +1857,119 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name       | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|scalp_user_design | Dynamic     | -      | -      | -      | -      | 19     | -    | -    | -    | -    | -     | 0    | 0    | 
-|top               | C+A*B       | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|calc_complex      | (C-(A*B))'  | 6      | 10     | 15     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
 |calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calc_complex      | (C+A*B)'    | 6      | 10     | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|calc_complex      | (C-(A*B))'  | 6      | 6      | 18     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|top               | C+A*B       | 10     | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | C-(A*B)     | 30     | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mandelbrot_seq    | PCIN+A*B    | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|scalp_user_design | Dynamic     | -      | -      | -      | -      | 15     | -    | -    | -    | -    | -     | 0    | 0    | 
 +------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -1224,51 +2017,50 @@ Report Cell Usage:
 |15    |vga_hdmi_clk_rst_system_inst_0_rst_ps7_1_vga_0_bbox  |     1|
 |16    |vga_hdmi_clk_rst_system_inst_0_rst_ps7_2_hdmi_0_bbox |     1|
 |17    |vga_hdmi_clk_rst_system_inst_0_vga_hdmi_clock_0_bbox |     1|
-|18    |CARRY4                                               |    29|
-|19    |DSP48E1                                              |     8|
-|22    |LUT1                                                 |    10|
-|23    |LUT2                                                 |   110|
-|24    |LUT3                                                 |   187|
-|25    |LUT4                                                 |   164|
-|26    |LUT5                                                 |   259|
-|27    |LUT6                                                 |   213|
-|28    |MUXF7                                                |     4|
-|29    |OSERDESE2                                            |     8|
-|31    |RAMB36E1                                             |    64|
-|33    |FDCE                                                 |   248|
-|34    |FDRE                                                 |   554|
-|35    |FDSE                                                 |     6|
-|36    |IBUF                                                 |     8|
-|37    |IOBUF                                                |     2|
-|38    |OBUF                                                 |    10|
-|39    |OBUFDS                                               |     4|
-|40    |OBUFT                                                |     2|
+|18    |CARRY4                                               |   271|
+|19    |DSP48E1                                              |   113|
+|22    |LUT1                                                 |   395|
+|23    |LUT2                                                 |  1935|
+|24    |LUT3                                                 |   223|
+|25    |LUT4                                                 |   896|
+|26    |LUT5                                                 |   300|
+|27    |LUT6                                                 |   445|
+|28    |OSERDESE2                                            |     8|
+|30    |RAMB36E1                                             |    64|
+|31    |FDCE                                                 |  1441|
+|32    |FDRE                                                 |   597|
+|33    |FDSE                                                 |     5|
+|34    |IBUF                                                 |     8|
+|35    |IOBUF                                                |     2|
+|36    |OBUF                                                 |    10|
+|37    |OBUFDS                                               |     4|
+|38    |OBUFT                                                |     2|
 +------+-----------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.043 ; gain = 818.441
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 160 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:01:10 . Memory (MB): peak = 1955.441 ; gain = 1019.594
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:01:13 . Memory (MB): peak = 1955.441 ; gain = 1019.594
+Synthesis finished with 0 errors, 0 critical warnings and 139 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1755.043 ; gain = 741.363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 1755.043 ; gain = 818.441
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1955.441 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 1755.043 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 454 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-1115] Found multi-term driver net: PSxB.ZynqxI/<const0>.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1955.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1761.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 Le chemin d'accŠs sp‚cifi‚ est introuvable.
-Synth Design complete | Checksum: 107f262c
+Synth Design complete | Checksum: db99f7c3
 INFO: [Common 17-83] Releasing license: Synthesis
-206 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
+273 Infos, 161 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:22 . Memory (MB): peak = 1955.441 ; gain = 1430.828
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1955.441 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 1761.551 ; gain = 1238.180
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1761.551 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/mandelbrot/scalp_user_design/scalp_user_design.runs/synth_1/scalp_user_design.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file scalp_user_design_utilization_synth.rpt -pb scalp_user_design_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 28 23:22:19 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  3 01:25:02 2024...

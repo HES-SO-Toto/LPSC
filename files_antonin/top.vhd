@@ -46,16 +46,12 @@ entity top is
 
         step_x_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
         step_y_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
-
-        read_addr : in  std_logic_vector((clogb2(SCREEN_X_SIZE*SCREEN_Y_SIZE)) downto 0); 
+        read_addr : in  std_logic_vector(clogb2(SCREEN_X_SIZE)+clogb2(SCREEN_Y_SIZE) downto 0); 
         pixel_o : out std_logic_vector(C_RAM_WIDTH-1 downto 0)
     );
 end entity top;
 
 architecture behave of top is
-    constant MINUS_TWO_FIXED : std_logic_vector(DATASIZE-1 downto 0):= "111000000000000000";
-    constant HALF_ONE_FIXED : std_logic_vector(DATASIZE-1 downto 0):= "000110000000000000";
-    constant STEP_VALUE : std_logic_vector(DATASIZE-1 downto 0):= "000000000001000100";
     -- Declaration of the signals,components,types and procedures
     component mandelbrot_seq is
     generic ( 
@@ -92,8 +88,8 @@ architecture behave of top is
             clk_i : in std_logic; -- clock
             nreset_i : in std_logic; -- reset
 
-            pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);-- x position out
-            pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0); -- y position out
+            pixel_x_o : out std_logic_vector(clogb2(X) downto 0);-- x position out
+            pixel_y_o : out std_logic_vector(clogb2(X) downto 0); -- y position out
 
             real_n_o : out std_logic_vector(DATASIZE-1 downto 0); -- real out
             imag_n_o : out std_logic_vector(DATASIZE-1 downto 0) -- imag out
@@ -103,7 +99,7 @@ architecture behave of top is
     component Bram is
         generic (
             C_RAM_WIDTH : integer := C_RAM_WIDTH;            		-- Specify RAM data width
-            C_RAM_DEPTH : integer := SCREEN_X_SIZE*SCREEN_Y_SIZE 	-- Specify RAM depth (number of entries)
+            C_RAM_DEPTH : integer := SCREEN_Y_SIZE*SCREEN_X_SIZE 	-- Specify RAM depth (number of entries)
         );
         port(
             clka : in std_logic;
@@ -128,15 +124,26 @@ architecture behave of top is
     -- Signals (Nomenclature : name of the signal + _s)
     -- exemple : signal a : signed(N_bit-1 downto 0);
     signal c_real_s, c_imaginary_s: std_logic_vector(DATASIZE-1 downto 0);
-    signal pixel_x_s, pixel_y_s: std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal pixel_x_s: std_logic_vector(clogb2(SCREEN_X_SIZE) downto 0);
+    signal pixel_y_s: std_logic_vector(clogb2(SCREEN_X_SIZE) downto 0);
     signal iterations_s : std_logic_vector(SIZE_ITER-1 downto 0);
     signal write_ena_s : std_logic_vector(0 downto 0);
-    signal mandel_addr_s : std_logic_vector((clogb2(SCREEN_X_SIZE*SCREEN_Y_SIZE)+1) downto 0);
+    signal mandel_addr_s : std_logic_vector(pixel_y_s'high+pixel_x_s'high+1 downto 0);
     signal valid_s : std_logic;
     signal finished_s : std_logic;
     signal incr_s : std_logic;
     signal start_s : std_logic;
     -- Procedures (Nomenclature : name of the procedure + _p)
+    
+    attribute mark_debug : string;
+    attribute keep       : string;
+    
+    attribute mark_debug of mandel_addr_s : signal is "true";
+    attribute keep of mandel_addr_s       : signal is "true";
+    attribute mark_debug of pixel_x_s : signal is "true";
+    attribute keep of pixel_x_s       : signal is "true";
+    attribute mark_debug of pixel_y_s : signal is "true";
+    attribute keep of pixel_y_s       : signal is "true";
 
 begin
      decode_state : process(all)
@@ -217,18 +224,18 @@ begin
             imag_n_o => c_imaginary_s -- imag out
         );
         start_s <= '0' when finished_s = '1' else '1';
-        mandel_addr_s <= std_logic_vector(unsigned(pixel_y_s)*720 + unsigned(pixel_x_s));
+        mandel_addr_s <= std_logic_vector(unsigned(pixel_y_s)*SCREEN_X_SIZE +unsigned(pixel_x_s));
         write_ena_s <= "1" when finished_s = '1' else "0";
     -- Bram
         my_Bram_inst : Bram
         generic map(
             C_RAM_WIDTH => 4,
-            C_RAM_DEPTH => SCREEN_Y_SIZE*SCREEN_X_SIZE
+            C_RAM_DEPTH =>SCREEN_Y_SIZE * SCREEN_X_SIZE
         )
         port map(
             clka => clka_i,
             clkb => clkb_i,
-            addra => mandel_addr_s(mandel_addr_s'high-1 downto 0),
+            addra => mandel_addr_s(mandel_addr_s'high-clogb2(NB_TOP)-1 downto 0),
             addrb => read_addr,
             dia => iterations_s(3 downto 0),
             ena => '1',

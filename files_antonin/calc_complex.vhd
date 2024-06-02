@@ -20,6 +20,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library scalp_lib;
+use scalp_lib.user_pkg.all;
+
 entity calc_complex is
     generic (
         DATASIZE : integer := 18;
@@ -37,8 +40,8 @@ entity calc_complex is
         clk_i : in std_logic; -- clock
         nreset_i : in std_logic; -- reset
 
-        pixel_x_o : out std_logic_vector(SIZE_PIXEL-1 downto 0);-- x position out
-        pixel_y_o : out std_logic_vector(SIZE_PIXEL-1 downto 0); -- y position out
+        pixel_x_o : out std_logic_vector(clogb2(X) downto 0);-- x position out
+        pixel_y_o : out std_logic_vector(clogb2(X) downto 0); -- y position out
 
         real_n_o : out std_logic_vector(DATASIZE-1 downto 0); -- real out
         imag_n_o : out std_logic_vector(DATASIZE-1 downto 0) -- imag out
@@ -53,31 +56,31 @@ architecture behave of calc_complex is
     component counter
         generic (
             Nmax : integer := X;
-            Nbit : integer := SIZE_PIXEL
+            Nbit : integer := clogb2(X)
             );
         port (
             clock_i : in std_logic;
             incr_i : in std_logic;
             nreset_i : in std_logic;
-            count_o : out std_logic_vector(Nbit-1 downto 0);
+            count_o : out std_logic_vector(Nbit downto 0);
             ovf_o : out std_logic
         );
     end component;
     -- Types (Nomenclature : name of the type + _t)
     -- exemple : type state_t is (idle, start, stop);
     -- Signals (Nomenclature : name of the signal + _s)
-    signal cnt_x_reg_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
-    signal cnt_y_reg_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
-    signal cnt_x_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
-    signal cnt_y_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
-    signal cnt_x_fut_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
-    signal cnt_y_fut_s : std_logic_vector(SIZE_PIXEL-1 downto 0);
+    signal cnt_x_reg_s : std_logic_vector(clogb2(X) downto 0);
+    signal cnt_y_reg_s : std_logic_vector(clogb2(X) downto 0);
+    signal cnt_x_s : std_logic_vector(clogb2(X) downto 0);
+    signal cnt_y_s : std_logic_vector(clogb2(X) downto 0);
+    signal cnt_x_fut_s : std_logic_vector(clogb2(X) downto 0);
+    signal cnt_y_fut_s : std_logic_vector(clogb2(X) downto 0);
     signal real_reg_s : std_logic_vector(DATASIZE-1 downto 0);
     signal imag_reg_s : std_logic_vector(DATASIZE-1 downto 0);
     signal z_real_fut_s : std_logic_vector(DATASIZE-1 downto 0);
     signal z_imag_fut_s : std_logic_vector(DATASIZE-1 downto 0);
-    signal calc_z_real_s : std_logic_vector(SIZE_PIXEL+DATASIZE-1 downto 0);
-    signal calc_z_imag_s : std_logic_vector(SIZE_PIXEL+DATASIZE-1 downto 0);
+    signal calc_z_real_s : std_logic_vector(clogb2(X)+DATASIZE downto 0);
+    signal calc_z_imag_s : std_logic_vector(clogb2(X)+DATASIZE downto 0);
     signal ovf_counter_x_s,ovf_counter_y_s : std_logic;
     signal incr_s : std_logic;
     -- exemple : signal a : signed(N_bit-1 downto 0);
@@ -108,7 +111,7 @@ begin
     counter_x_c : counter
     generic map (
         Nmax => X,
-        Nbit => SIZE_PIXEL
+        Nbit => clogb2(X)
     )
     port map (
         clock_i => clk_i,
@@ -120,7 +123,7 @@ begin
     counter_y_c : counter
     generic map (
         Nmax => Y,
-        Nbit => SIZE_PIXEL
+        Nbit => clogb2(X)
     )
     port map (
         clock_i => clk_i,

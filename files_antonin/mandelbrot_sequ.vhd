@@ -42,7 +42,7 @@ end mandelbrot_seq;
 architecture behave of mandelbrot_seq is
     -- Déclaration of the signals,components,types and procedures
     constant LAST_INDEX   : integer := COMMA; -- index of the last bit
-    constant HIGH_IDX  : integer := LAST_INDEX+SIZE-1;
+    constant HIGH_INDEX  : integer := LAST_INDEX+SIZE-1;
     constant FOUR : signed((2*SIZE)-1 downto 0) := ((COMMA*2)+2 => '1', others => '0');
     -- Components (Nomenclature : name of the component + _c)
     -- Components
@@ -112,8 +112,8 @@ begin
                 end if ;
             when CALCULING =>
                 end_v := '1' when (n_iter_pres_s + 1 >= N_ITER) or (euclidean_distance_s > FOUR) else '0'; 
-                z_reel_fut_s <= power_z_real_minus_imag_s(HIGH_IDX downto LAST_INDEX) + signed(c_reel_i);
-                z_imag_fut_s <= shift_left(mult_z_reel_image_s,1)(HIGH_IDX downto LAST_INDEX) + signed(c_imag_i);
+                z_reel_fut_s <= power_z_real_minus_imag_s(HIGH_INDEX downto LAST_INDEX) + signed(c_reel_i);
+                z_imag_fut_s <= shift_left(mult_z_reel_image_s,1)(HIGH_INDEX downto LAST_INDEX) + signed(c_imag_i);
                 n_iter_fut_s <= n_iter_pres_s + 1;
                 if end_v = '1' then 
                     state_fut_s <= VALID;
