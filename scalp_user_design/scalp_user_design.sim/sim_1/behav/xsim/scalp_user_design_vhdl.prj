@@ -20,13 +20,17 @@ vhdl xil_defaultlib  \
 "../../../../scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_axi_iic_ioext_0/sim/scalp_zynqps_axi_iic_ioext_0.vhd" \
 "../../../../scalp_user_design.ip_user_files/bd/scalp_zynqps/ip/scalp_zynqps_axi_gpio_joystick_0/sim/scalp_zynqps_axi_gpio_joystick_0.vhd" \
 "../../../../scalp_user_design.ip_user_files/bd/scalp_zynqps/sim/scalp_zynqps.vhd" \
-"../../../../../LPSC/calc_complex.vhd" \
-"../../../../../LPSC/compteur.vhd" \
+
+vhdl scalp_lib  \
+"../../../../../files_antonin/compteur.vhd" \
 
 vhdl2008 scalp_lib  \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/scalp_axi_pkg.vhd" \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi_pkg.vhd" \
 "../../../../../../scalp_revc_windows/LPSC/scalp_color_pkg.vhd" \
+
+vhdl scalp_lib  \
+"../../../../../files_antonin/user_pkg.vhd" \
 
 vhdl2008 xil_defaultlib  \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd" \
@@ -40,8 +44,12 @@ vhdl2008 xil_defaultlib  \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd" \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd" \
 "../../../../scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd" \
-"../../../../../LPSC/mandelbrot_sequ.vhd" \
-"../../../../../LPSC/top.vhd" \
+
+vhdl2019 scalp_lib  \
+"../../../../../files_antonin/Bram.vhd" \
+"../../../../../files_antonin/calc_complex.vhd" \
+"../../../../../files_antonin/mandelbrot_sequ.vhd" \
+"../../../../../files_antonin/top.vhd" \
 
 vhdl xil_defaultlib  \
 "../../../../../files/scalp_user_design.vhd" \

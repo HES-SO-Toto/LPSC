@@ -14,31 +14,14 @@
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="326"></NameColumnWidth>
+      <NameColumnWidth column_width="306"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
-   <wvobject fp_name="PLxB.ImGenxB.color_pixel_s" type="array">
+   <WVObjectSize size="1" />
+   <wvobject fp_name="Clk125RstxR" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.color_pixel_s[3:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.color_pixel_s[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.hdmi_addr_s" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.hdmi_addr_s[19:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.hdmi_addr_s[19:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.video_mem_inst/doutb" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.video_mem_inst/doutb[3:0]</obj_property>
-      <obj_property name="ObjectShortName">doutb[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">Clk125RstxR</obj_property>
+      <obj_property name="ObjectShortName">Clk125RstxR</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

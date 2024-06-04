@@ -80,8 +80,13 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 set_msg_config  -id {Common 17-55}  -string {{CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:39]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.}}  -suppress 
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed:  Run'impl_1' is already running and cannot be relaunched.}}  -suppress 
+set_msg_config  -id {Labtools 27-2269}  -string {{ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210299AFB2E7.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.}}  -suppress 
+set_msg_config  -id {HDL 9-1206}  -string {{CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [E:/mandelbrot/files/scalp_user_design.vhd:938]}}  -suppress 
 set_msg_config  -id {HDL 9-1206}  -string {{CRITICAL WARNING: [HDL 9-1206] Syntax error near 'entity' [E:/mandelbrot/LPSC/top.vhd:49]}}  -suppress 
 set_msg_config  -id {Vivado 12-1419}  -string {{CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/constrs_1/imports/files/timing_constraints.xdc:87]}}  -suppress 
+set_msg_config  -id {Chipscope 16-213}  -string {{ERROR: [Chipscope 16-213] The debug port 'u_ila_0/clk' has 1 unconnected channels (bits). This will cause errors during implementation.}}  -suppress 
 set_msg_config  -id {Simtcl 6-179}  -string {{ERROR: [Simtcl 6-179] Couldn't add force for the following reason: Illegal value '304$': Character '$' is not a legal hexadecimal literal for the object's type.}}  -suppress 
 set_msg_config  -id {Simtcl 6-179}  -string {{ERROR: [Simtcl 6-179] Couldn't add force for the following reason: Illegal value '000110000000000000': Object size 18 does not match size of given value 000110000000000000.}}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299AFB2E7}}  -suppress 
@@ -110,17 +115,19 @@ set_property ip_output_repo e:/mandelbrot/scalp_user_design/scalp_user_design.ca
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib {
-  E:/mandelbrot/LPSC/calc_complex.vhd
-  E:/mandelbrot/LPSC/compteur.vhd
-  E:/mandelbrot/files/scalp_user_design.vhd
+read_vhdl -library scalp_lib {
+  E:/mandelbrot/files_antonin/compteur.vhd
+  E:/mandelbrot/files_antonin/user_pkg.vhd
 }
 read_vhdl -vhdl2008 -library scalp_lib {
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_axi_pkg.vhd
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi_pkg.vhd
   E:/scalp_revc_windows/LPSC/scalp_color_pkg.vhd
+  E:/mandelbrot/files_antonin/Bram.vhd
+  E:/mandelbrot/files_antonin/calc_complex.vhd
+  E:/mandelbrot/files_antonin/mandelbrot_sequ.vhd
+  E:/mandelbrot/files_antonin/top.vhd
 }
-read_vhdl -library scalp_lib E:/mandelbrot/LPSC/user_pkg.vhd
 read_vhdl -vhdl2008 -library xil_defaultlib {
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_zynqps_user.vhd
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_firmwareid.vhd
@@ -133,10 +140,8 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/serializer_10_to_1.vhd
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/vga_to_hdmi.vhd
   E:/mandelbrot/scalp_user_design/scalp_user_design.srcs/sources_1/imports/files/scalp_hdmi.vhd
-  E:/mandelbrot/LPSC/mandelbrot_sequ.vhd
 }
-read_vhdl -vhdl2019 -library xil_defaultlib E:/mandelbrot/LPSC/Bram.vhd
-read_vhdl -vhdl2019 -library scalp_lib E:/mandelbrot/LPSC/top.vhd
+read_vhdl -library xil_defaultlib E:/mandelbrot/files/scalp_user_design.vhd
 add_files E:/mandelbrot/scalp_zynqps/scalp_zynqps.bd
 set_property used_in_implementation false [get_files -all e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_processing_system7_0_0/scalp_zynqps_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/mandelbrot/scalp_zynqps/ip/scalp_zynqps_xbar_0/scalp_zynqps_xbar_0_ooc.xdc]

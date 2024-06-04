@@ -821,17 +821,6 @@ begin
             constant C_FLOP_INPUT   : integer range 0 to 1  := 1;
             constant C_VECTOR_WIDTH : integer range 0 to 32 := 32;
             constant C_MTBF_STAGES  : integer range 0 to 6  := 2;
-            constant DATASIZE  : integer range 0 to 18 :=18;
-            constant COMMA  : integer range 0 to DATASIZE-3 :=14;
-            constant N_ITER  : integer range 0 to 100 :=100;
-            constant SIZE_ITER  : integer range 0 to 7 :=7;
-            constant SCREEN_X_SIZE : integer := 720;
-            constant SCREEN_Y_SIZE : integer := 720;
-            constant SIZE_PIXEL : integer := 10;
-            constant MINUS_TWO_FIXED : std_logic_vector(DATASIZE-1 downto 0):= "111000000000000000";
-            constant ONE_FIXED : std_logic_vector(DATASIZE-1 downto 0):= "000100000000000000";
-            constant STEP_X_VALUE : std_logic_vector(DATASIZE-1 downto 0):= "000000000000111001";
-            constant STEP_Y_VALUE : std_logic_vector(DATASIZE-1 downto 0):= "000000000000101110";
             
 
             constant C_AXI_CROSS_REGISTER : t_axi_register := (RegxD => x"00ffffff");
@@ -848,20 +837,7 @@ begin
                 clock_125           : in     std_logic
                 );
                 end component;
-                COMPONENT video_mem
-                PORT (
-                    clka : IN STD_LOGIC;
-                    ena : IN STD_LOGIC;
-                    wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-                    addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
-                    dina : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-                    clkb : IN STD_LOGIC;
-                    enb : IN STD_LOGIC;
-                    addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
-                    doutb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) 
-                );
-                END COMPONENT;
-            
+        
             COMPONENT top is
                 generic (
                     SIZE_PIXEL : integer := 12;
@@ -871,7 +847,7 @@ begin
                     SIZE_ITER : integer := 7;
                     SCREEN_X_SIZE : integer := 720;
                     SCREEN_Y_SIZE : integer := 720;
-                    C_RAM_WIDTH : integer := 3            		-- Specify RAM data width
+                    C_RAM_WIDTH : integer := 4          		-- Specify RAM data width
                 );
                 port(
                     clka_i : in std_logic;
@@ -885,7 +861,7 @@ begin
                     step_x_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
                     step_y_i : in std_logic_vector(DATASIZE-1 downto 0);  -- size step 
             
-                    read_addr : in  std_logic_vector((clogb2(SCREEN_X_SIZE*SCREEN_Y_SIZE)) downto 0); 
+                    read_addr : in  std_logic_vector(clogb2(SCREEN_X_SIZE)+clogb2(SCREEN_Y_SIZE) downto 0); 
                     pixel_o : out std_logic_vector(C_RAM_WIDTH-1 downto 0)
                 );
             end COMPONENT top;
@@ -899,21 +875,22 @@ begin
             signal ClkMandelxC                : std_logic         := '0';
             signal ClkMandelLockedxS          : std_logic         := '0';
             signal color_pixel_s              : std_logic_vector(3 downto 0) := (others => '0'); 
+            type color_pixel_vec_t            is array(0 to NB_TOP-1) of std_logic_vector(3 downto 0);
+            type real_vec_t                   is array(0 to NB_TOP-1) of  std_logic_vector(DATASIZE-1 downto 0);
+            signal imag_00_generate_s         : real_vec_t;                  
+            signal color_pixel_para_s         : color_pixel_vec_t  := (others => (others => '0'));
             signal pixel_color_s              : t_hdmi_vga_pix;
-            signal pixel_x_s,pixel_y_s        :std_logic_vector(SIZE_PIXEL-1 downto 0);
-            signal mandel_addr_s : std_logic_vector(19 downto 0);
-            signal hdmi_addr_s : std_logic_vector(19 downto 0);
-            signal interations_s :std_logic_vector(SIZE_ITER-1 downto 0);
-            signal interations_test_s :std_logic_vector(SIZE_ITER-1 downto 0);
-            signal finished_s,start_pres_s : std_logic;
-            signal end_mandel_s : std_logic;
-            signal write_ena_s : std_logic_vector(0 downto 0);
+            signal hdmi_addr_s                : std_logic_vector(2*SIZE_PIXEL_MAX+1 downto 0);
+            signal y_msb                      : integer;
+            signal y_lsb                      : unsigned(SIZE_PIXEL_MAX downto 0):= (others => '0'); 
+            
             -- Attributes
             attribute mark_debug : string;
             attribute keep       : string;
 
-            -- attribute mark_debug of CDCPatternPortsxD : signal is "true";
-            -- attribute keep of CDCPatternPortsxD       : signal is "true";
+            attribute mark_debug of imag_00_generate_s : signal is "true";
+            attribute keep of imag_00_generate_s       : signal is "true";
+                       
 
         --AKI 
         begin  -- block ImGenxB
@@ -928,16 +905,18 @@ begin
                 -- Clock in ports
                 clock_125 => Clk125xC
             );
-
-            mandelbrot_top_inst : top
+            
+            loop_top : for i in 0 to (NB_TOP-1) generate
+                imag_00_generate_s(i) <= real_stage_value(i);
+                mandel: top
                 generic map(
-                    SIZE_PIXEL => SIZE_PIXEL,
-                    COMMA =>COMMA,
-                    DATASIZE =>DATASIZE,
-                    N_ITER =>N_ITER,
-                    SIZE_ITER =>SIZE_ITER,
-                    SCREEN_X_SIZE =>SCREEN_X_SIZE,
-                    SCREEN_Y_SIZE =>SCREEN_Y_SIZE,
+                    SIZE_PIXEL => SIZE_PIXEL_MAX,
+                    COMMA => COMMA,
+                    DATASIZE => DATASIZE,
+                    N_ITER => N_ITER,
+                    SIZE_ITER => SIZE_ITER,
+                    SCREEN_X_SIZE => SCREEN_X,
+                    SCREEN_Y_SIZE => SCREEN_Y/NB_TOP,
                     C_RAM_WIDTH => 4
                 )
                 port map(
@@ -945,13 +924,17 @@ begin
                     clkb_i => HdmiVgaClocksxC.VgaxC,
                     nreset_i => ClkMandelLockedxS,
                     real_00_i => MINUS_TWO_FIXED,
-                    imag_00_i => ONE_FIXED,
+                    imag_00_i => imag_00_generate_s(i),
                     step_x_i => STEP_X_VALUE,
                     step_y_i => STEP_Y_VALUE,
-                    read_addr => hdmi_addr_s((hdmi_addr_s'high-1) downto 0),
-                    pixel_o => color_pixel_s
+                    read_addr => hdmi_addr_s(hdmi_addr_s'high-clogb2(NB_TOP)-1 downto 0),
+                    pixel_o => color_pixel_para_s(i)
                 );
-            hdmi_addr_s <= std_logic_vector(unsigned(VgaPixCountersxD.VxD(SIZE_PIXEL-1 downto 0))*720 + unsigned(VgaPixCountersxD.HxD(SIZE_PIXEL-1 downto 0))) ;
+            end generate;
+            y_msb <= TO_INTEGER(unsigned(VgaPixCountersxD.VxD(SIZE_PIXEL_MAX downto 0))/(SCREEN_Y/NB_TOP));
+            y_lsb <= unsigned(VgaPixCountersxD.VxD(SIZE_PIXEL_MAX downto 0)) mod (SCREEN_Y/NB_TOP);
+            color_pixel_s <= color_pixel_para_s(y_msb);
+            hdmi_addr_s <= std_logic_vector(y_lsb*SCREEN_X + unsigned(VgaPixCountersxD.HxD(SIZE_PIXEL_MAX downto 0)));
             pixel_color_s <= C_16_COLOUR_PICO_8_PALETTE(TO_INTEGER(unsigned(color_pixel_s)));
             SwissFlagxP : process (HdmiVgaClocksxC.PllLockedxS,
                                    HdmiVgaClocksxC.VgaResetxRNA,

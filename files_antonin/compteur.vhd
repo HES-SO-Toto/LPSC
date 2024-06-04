@@ -29,7 +29,7 @@ entity counter is
         clock_i : in std_logic;
         incr_i : in std_logic;
         nreset_i : in std_logic;
-        count_o : out std_logic_vector(Nbit-1 downto 0);
+        count_o : out std_logic_vector(Nbit downto 0);
         ovf_o : out std_logic
     );
 end entity counter;
@@ -42,7 +42,7 @@ architecture behave of counter is
 
     -- Signals (Nomenclature : name of the signal + _s)
     -- exemple : signal a : signed(N_bit-1 downto 0);
-    signal count_pres_s, count_fut_s: std_logic_vector(Nbit-1 downto 0);
+    signal count_pres_s, count_fut_s: std_logic_vector(Nbit downto 0);
     signal incr_old_s : std_logic;
     signal rising_edge_det_s : std_logic;
     signal ovf_s : std_logic;

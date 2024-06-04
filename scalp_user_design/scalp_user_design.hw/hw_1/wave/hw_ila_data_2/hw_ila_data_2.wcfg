@@ -10,50 +10,45 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="7"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomEndTime time="1,025"></ZoomEndTime>
+      <Cursor1Time time="442"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="350"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="148"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
-   <wvobject fp_name="PLxB.ImGenxB.video_mem_inst/dina" type="array">
+   <WVObjectSize size="4" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="PLxB.ImGenxB.imag_00_generate_s[0]" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.video_mem_inst/dina[3:0]</obj_property>
-      <obj_property name="ObjectShortName">dina[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.imag_00_generate_s[0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.imag_00_generate_s[0][17:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.end_mandel_s" type="logic">
+   <wvobject fp_name="PLxB.ImGenxB.imag_00_generate_s[1]" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.end_mandel_s</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.end_mandel_s</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.imag_00_generate_s[1][17:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.imag_00_generate_s[1][17:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.interations_s" type="array">
+   <wvobject fp_name="PLxB.ImGenxB.imag_00_generate_s[2]" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.interations_s[6:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.interations_s[6:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.imag_00_generate_s[2][17:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.imag_00_generate_s[2][17:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.pixel_x_s" type="array">
+   <wvobject fp_name="PLxB.ImGenxB.imag_00_generate_s[3]" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.pixel_x_s[9:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.pixel_x_s[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="PLxB.ImGenxB.pixel_y_s" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">PLxB.ImGenxB.pixel_y_s[9:0]</obj_property>
-      <obj_property name="ObjectShortName">PLxB.ImGenxB.pixel_y_s[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">PLxB.ImGenxB.imag_00_generate_s[3][17:0]</obj_property>
+      <obj_property name="ObjectShortName">PLxB.ImGenxB.imag_00_generate_s[3][17:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
